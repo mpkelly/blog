@@ -69,9 +69,9 @@ export const getStyles = (
         const value = getTokenValue(key, styles[key]);
 
         if (new Object(value) === value) {
-          //it's an object
+          // it's an object
           if (isBreakValues(value)) {
-            //put an entry in each breakpoint bucket for the specified keys
+            // put an entry in each breakpoint bucket for the specified keys
             Object.keys(value).forEach((breakpoint) => {
               if (!(output as any)[breakpoint].get(selector)) {
                 (output as any)[breakpoint].set(selector, []);
@@ -88,7 +88,7 @@ export const getStyles = (
             process(value, key);
           }
         } else {
-          //it's a single property so put in xs bucket
+          // it's a single property so put in xs bucket
           if (!output.xs.get(selector)) {
             output.xs.set(selector, []);
           }

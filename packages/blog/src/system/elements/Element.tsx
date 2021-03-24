@@ -22,7 +22,8 @@ export type Element = {
   //TODO fix type issue - can't assign Element so using any
   [key in keyof CSSProperties]:
     | PropertyValue
-    | Partial<BreakValues<PropertyValue>>;
+    | Partial<BreakValues<PropertyValue>>
+    | { [key: string]: any };
 } &
   Modifiers;
 

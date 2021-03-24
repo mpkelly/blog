@@ -48,10 +48,7 @@ export const SystemTokens: Tokens = {
   fontSize: {
     xs: 10,
     sm: 12,
-    primary: {
-      xs: 16,
-      lg: 20,
-    },
+    primary: 16,
     lg: 24,
     xl: 30,
     gigantic: 120,
