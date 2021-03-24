@@ -2,7 +2,7 @@ import React from 'react';
 import { Row } from 'elements/flex/Row';
 import { Input, useInput } from 'elements/input/Input';
 import { Icon } from 'elements/icon/Icon';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 
 const Style: Element = {
   position: 'relative',

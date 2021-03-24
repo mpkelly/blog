@@ -1,7 +1,7 @@
 import React from 'react';
 import { Article } from 'elements/flex/Article';
 import { Main } from 'elements/flex/Main';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Email } from './Email';
 import { Body } from './Body';
 import { Header } from './Header';

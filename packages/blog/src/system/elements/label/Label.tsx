@@ -1,3 +1,3 @@
-import { createElement } from 'system/Element';
+import { createElement } from 'elements/Element';
 
 export const Label = createElement<HTMLSpanElement>('span', 'label');

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ReactNode } from 'react';
 import { Link } from '../navigation/Link';
 import { Text } from 'elements/text/Text';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Icon } from 'elements/icon/Icon';
 
 type Props = {

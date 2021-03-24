@@ -1,3 +1,3 @@
-import {createElement} from "../../Element";
+import { createElement } from '../Element';
 
-export const ListItem = createElement<HTMLLIElement>("li", "list-item")
+export const ListItem = createElement<HTMLLIElement>('li', 'list-item');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Icon } from 'elements/icon/Icon';
 import { Badge } from 'elements/badge/Badge';
 import { Text } from 'elements/text/Text';

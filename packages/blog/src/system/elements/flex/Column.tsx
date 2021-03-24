@@ -1,4 +1,4 @@
-import { Element, createElement } from '../../Element';
+import { Element, createElement } from '../Element';
 
 export const FlexColumn: Element = {
   display: 'flex',
@@ -6,8 +6,6 @@ export const FlexColumn: Element = {
   alignItems: 'flex-start',
 };
 
-export const Column = createElement<HTMLDivElement>(
-  'div',
-  'column',
-  FlexColumn
-);
+export const Column = createElement<HTMLDivElement>('div', 'column', {
+  defaultStyle: FlexColumn,
+});

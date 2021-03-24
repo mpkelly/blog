@@ -6,7 +6,7 @@ import {
   ToolbarItem,
   useToolbarState,
 } from 'elements/toolbar/Toolbar';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Row } from 'elements/flex/Row';
 import { Icon } from 'elements/icon/Icon';
 import { Column } from 'elements/flex/Column';

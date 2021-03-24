@@ -4,7 +4,7 @@ import { ListItem } from 'elements/list/ListItem';
 import { List } from 'elements/list/List';
 import { Text } from 'elements/text/Text';
 import { Link } from './Link';
-import { ElementProps } from 'system/Element';
+import { ElementProps } from 'elements/Element';
 
 const ListStyle = {
   marginLeft: 'auto',

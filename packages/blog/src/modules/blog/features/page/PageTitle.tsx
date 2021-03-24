@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text } from 'elements/text/Text';
 import { Row } from 'elements/flex/Row';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { styled } from 'goober';
 
 type Props = {

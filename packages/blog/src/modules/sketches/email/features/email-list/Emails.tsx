@@ -2,7 +2,7 @@ import React from 'react';
 import { Toolbar, useToolbarState } from 'elements/toolbar/Toolbar';
 import { EmailListItem } from './EmaiItem';
 import { Email } from '../email/Email';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { SearchBox } from './SearchBox';
 import { Column } from 'elements/flex/Column';
 import { Text } from 'elements/text/Text';

@@ -12,8 +12,8 @@ export const Blog = () => {
       icons={SystemIcons}
       elements={SystemElements}
       tokens={SystemTokens}
-      lang={'lorem'}
       bundles={RootLanguageBundle}
+      lang={'lorem'}
     >
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link

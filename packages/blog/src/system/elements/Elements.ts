@@ -1,4 +1,4 @@
-import { Element } from '../Element';
+import { Element } from './Element';
 
 export type Elements = {
   [key: string]: Element;

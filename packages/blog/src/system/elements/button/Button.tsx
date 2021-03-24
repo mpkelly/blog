@@ -1,5 +1,5 @@
 import { Button as ReakitButton, ButtonProps } from 'reakit';
-import { createJsxElement } from '../../Element';
+import { createJsxElement } from '../Element';
 
 const InlineFlex = {
   display: 'inline-flex',
@@ -9,5 +9,5 @@ const InlineFlex = {
 export const Button = createJsxElement<HTMLButtonElement, Partial<ButtonProps>>(
   ReakitButton,
   'button',
-  InlineFlex
+  { defaultStyle: InlineFlex }
 );

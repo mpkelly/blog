@@ -1,4 +1,6 @@
-import {createElement} from "../../Element";
-import {FlexColumn} from "./Column";
+import { createElement } from '../Element';
+import { FlexColumn } from './Column';
 
-export const Section = createElement<HTMLDivElement>("section", "section", FlexColumn)
+export const Section = createElement<HTMLDivElement>('section', 'section', {
+  defaultStyle: FlexColumn,
+});

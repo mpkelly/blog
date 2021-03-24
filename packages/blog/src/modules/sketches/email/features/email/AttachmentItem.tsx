@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Attachment } from './Email';
 import { Row } from 'elements/flex/Row';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Text } from 'elements/text/Text';
 import { ToolbarItemProps } from 'reakit';
 import { Icon } from 'elements/icon/Icon';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactElementProps } from 'system/Element';
+import { ReactElementProps } from 'elements/Element';
 import { Icon } from 'elements/icon/Icon';
 import {
   Toolbar as SystenToolbar,

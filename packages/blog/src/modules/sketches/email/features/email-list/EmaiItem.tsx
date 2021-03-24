@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { ToolbarItem, ToolbarItemProps } from 'elements/toolbar/Toolbar';
 import { Email } from '../email/Email';
 import { Column } from 'elements/flex/Column';

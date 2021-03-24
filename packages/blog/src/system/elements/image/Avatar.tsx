@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createElement, ElementProps } from 'system/Element';
+import { createElement, ElementProps } from 'elements/Element';
 import { Thumbnail } from 'system/elements/image/Thumbnail';
 import { Text } from 'system/elements/text/Text';
 import { FlexRow, Row } from 'system/elements/flex/Row';
@@ -46,4 +46,6 @@ const getText = (text: string) => {
   return String(text.charAt(0) + text.charAt(1)).toUpperCase();
 };
 
-const Container = createElement<HTMLDivElement>('div', 'avatar', FlexRow);
+const Container = createElement<HTMLDivElement>('div', 'avatar', {
+  defaultStyle: FlexRow,
+});

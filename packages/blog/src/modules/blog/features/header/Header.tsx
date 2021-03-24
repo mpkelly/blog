@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Header as HTMLHeader } from 'elements/flex/Header';
 import { Navigation } from '../navigation/Navigation';
 import { Text } from 'elements/text/Text';
-import { ElementProps } from 'system/Element';
+import { ElementProps } from 'elements/Element';
 
 const Style = {
   alignItems: 'center',

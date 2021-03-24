@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Header as SystemHeader } from 'elements/flex/Header';
 import { Email } from './Email';
 import { H1 } from 'elements/text/Headings';

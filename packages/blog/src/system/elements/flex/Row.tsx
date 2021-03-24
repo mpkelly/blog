@@ -1,5 +1,13 @@
-import {createElement, Element} from "../../Element";
+import { createElement, Element } from '../Element';
+import { SizeAlias, SizeAliasProps } from 'system/aliases/SizeAlias';
 
-export const FlexRow:Element = {display:"flex"};
+export const FlexRow: Element = { display: 'flex' };
 
-export const Row = createElement<HTMLDivElement>("div", "row", FlexRow)
+export const Row = createElement<HTMLDivElement, {}, SizeAliasProps>(
+  'div',
+  'row',
+  {
+    defaultStyle: FlexRow,
+    aliases: [SizeAlias],
+  }
+);

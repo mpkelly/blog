@@ -1,4 +1,4 @@
-import { createJsxElement } from 'system/Element';
+import { createJsxElement } from 'elements/Element';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 
 export const Link = createJsxElement<HTMLAnchorElement, NavLinkProps>(

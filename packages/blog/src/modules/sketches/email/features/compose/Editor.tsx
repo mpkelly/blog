@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Column } from 'elements/flex/Column';
 import { Textarea } from 'elements/text/Textarea';
 import { useInput } from 'elements/input/Input';
-import { ReactElementProps } from 'system/Element';
+import { ReactElementProps } from 'elements/Element';
 import { Toolbar } from './Toolbar';
 import { Footer } from 'elements/flex/Footer';
 import { Button } from 'elements/button/Button';

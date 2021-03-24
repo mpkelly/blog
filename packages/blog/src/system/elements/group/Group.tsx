@@ -1,4 +1,7 @@
-import {Group as ReakitGroup, GroupProps} from "reakit";
-import {createJsxElement} from "../../Element";
+import { Group as ReakitGroup, GroupProps } from 'reakit';
+import { createJsxElement } from '../Element';
 
-export const Group = createJsxElement<HTMLDivElement, Partial<GroupProps>>(ReakitGroup, "group");
+export const Group = createJsxElement<HTMLDivElement, Partial<GroupProps>>(
+  ReakitGroup,
+  'group'
+);

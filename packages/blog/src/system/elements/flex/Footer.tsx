@@ -1,4 +1,6 @@
-import {createElement} from "../../Element";
-import {FlexRow} from "./Row";
+import { createElement } from '../Element';
+import { FlexRow } from './Row';
 
-export const Footer = createElement<HTMLDivElement>("footer", "footer", FlexRow)
+export const Footer = createElement<HTMLDivElement>('footer', 'footer', {
+  defaultStyle: FlexRow,
+});

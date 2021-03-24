@@ -1,5 +1,5 @@
 import React from 'react';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import {
   Toolbar as SystemToolbar,
   ToolbarItem,

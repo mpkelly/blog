@@ -1,15 +1,15 @@
-import React, {createContext, ReactNode, useContext} from 'react';
-import {Elements} from "./Elements";
+import React, { ReactNode } from 'react';
+import { Elements } from './Elements';
+import { createContext } from 'elements/util/Context';
 
-export const ElementContext = createContext<Elements|undefined>(undefined);
-export const useElements = () => useContext(ElementContext) as Elements;
+export const [Context, useElements] = createContext<Elements>();
 
 type Props = {
-  elements?:Elements;
-  children:ReactNode;
-}
+  elements?: Elements;
+  children: ReactNode;
+};
 
-export const ElementProvider = (props:Props) => {
-  const {elements = {}, children} = props;
-  return <ElementContext.Provider value={elements}>{children}</ElementContext.Provider>
-}
+export const ElementProvider = (props: Props) => {
+  const { elements = {}, children } = props;
+  return <Context.Provider value={elements}>{children}</Context.Provider>;
+};

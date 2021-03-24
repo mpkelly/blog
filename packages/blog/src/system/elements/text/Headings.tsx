@@ -1,4 +1,4 @@
-import { createElement } from '../../Element';
+import { createElement } from '../Element';
 
 export const H1 = createElement<HTMLHeadingElement>('h1');
 export const H2 = createElement<HTMLHeadingElement>('h2');

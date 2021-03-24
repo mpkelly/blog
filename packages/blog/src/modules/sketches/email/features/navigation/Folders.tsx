@@ -2,7 +2,7 @@ import React from 'react';
 import { FolderItem } from './FolderItem';
 import { Button } from 'elements/button/Button';
 import { Toolbar, useToolbarState } from 'elements/toolbar/Toolbar';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Column } from 'elements/flex/Column';
 
 const Style: Element = {

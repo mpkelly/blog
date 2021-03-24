@@ -1,15 +1,15 @@
-import React, {createContext, ReactNode, useContext} from 'react';
-import {Tokens} from "./Tokens";
+import React, { ReactNode } from 'react';
+import { Tokens } from './Tokens';
+import { createContext } from 'elements/util/Context';
 
-export const TokenContext = createContext<Tokens|undefined>(undefined);
-export const useTokens = () => useContext(TokenContext) as Tokens;
+export const [Context, useTokens] = createContext<Tokens>();
 
 type Props = {
-  tokens?:Tokens;
-  children:ReactNode;
-}
+  tokens?: Tokens;
+  children: ReactNode;
+};
 
-export const TokenProvider = (props:Props) => {
-  const {tokens = {}, children} = props;
-  return <TokenContext.Provider value={tokens}>{children}</TokenContext.Provider>
-}
+export const TokenProvider = (props: Props) => {
+  const { tokens = {}, children } = props;
+  return <Context.Provider value={tokens}>{children}</Context.Provider>;
+};

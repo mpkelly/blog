@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Column } from 'elements/flex/Column';
 import { Header } from '../header/Header';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 
 type Props = {
   children: JSX.Element | JSX.Element[];

@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from 'elements/icon/Icon';
 import { Text } from 'elements/text/Text';
 import { ToolbarItem, ToolbarItemProps } from 'elements/toolbar/Toolbar';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Button } from 'elements/button/Button';
 
 type Props = {

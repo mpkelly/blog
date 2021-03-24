@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Element } from 'system/Element';
+import { Element } from 'elements/Element';
 import { Article } from 'elements/flex/Article';
 import { Column } from 'elements/flex/Column';
 import { H3 } from 'elements/text/Headings';
