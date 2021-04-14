@@ -8,7 +8,7 @@ const liveServer = require('live-server');
   const params = {
     host: 'localhost',
     port: 1234,
-    root: './example',
+    root: './dist',
     file: 'index.html',
     path: '/#/home',
     logLevel: 0,

@@ -6,6 +6,8 @@ export const Link = createJsxElement<HTMLAnchorElement, NavLinkProps>(
   NavLink as any,
   'navlink',
   {
-    textDecoration: 'none',
+    defaultStyle: {
+      textDecoration: 'none',
+    },
   }
 );

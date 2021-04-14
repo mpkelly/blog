@@ -19,7 +19,7 @@ const colors = {
   'background.2': '#272829',
   'background.3': '#383838',
   'background.4': '#373737',
-  'background.5': '#28a9a8',
+  'background.5': '#2b2b2b',
 
   'text.1': '#e8eaed',
   'text.2': '#9aa0a6',
@@ -58,6 +58,7 @@ export const SystemTokens: Tokens = {
     primary: 14,
     lg: 16,
     xl: 22,
+    xxl: 60,
   },
   borderRadius: {
     sm: 3,

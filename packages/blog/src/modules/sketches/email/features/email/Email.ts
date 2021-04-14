@@ -29,7 +29,7 @@ Lorem mollis aliquam ut porttitor leo a diam sollicitudin. Habitasse platea dict
 
 Leo duis ut diam quam nulla porttitor massa. Etiam sit amet nisl purus in mollis nunc sed. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Blandit massa enim nec dui nunc mattis. Cras tincidunt lobortis feugiat vivamus at augue. Turpis egestas pretium aenean pharetra magna ac placerat. Quam vulputate dignissim suspendisse in. Amet aliquam id diam maecenas. Eget est lorem ipsum dolor. Lorem ipsum dolor sit amet consectetur adipiscing elit duis tristique. Et ligula ullamcorper malesuada proin. Sed sed risus pretium quam vulputate. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Fermentum et sollicitudin ac orci phasellus egestas.`.trim();
 
-export const ExampleEmails = [
+export const ExampleEmails: Email[] = [
   {
     id: '1',
     from: {

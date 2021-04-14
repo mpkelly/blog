@@ -1,23 +1,24 @@
 import React, { ReactNode } from 'react';
+import { createContext } from 'react-merge-context';
+import { I18NProvider } from 'react-with-i18n';
 import { IconBundle } from './icons/IconBundle';
 import { Elements } from 'elements/Elements';
 import { Tokens } from './tokens/Tokens';
 import { TokenProvider } from './tokens/TokenProvider';
 import { IconProvider } from './icons/IconProvider';
 import { ElementProvider } from 'elements/ElementProvider';
-import { I18NProvider, I18NProviderProps } from '@mpkelly/react-i18n';
 import { Breakpoints } from 'system/responsive/Breakpoints';
 import { DefaultBreakpoints } from 'system/responsive/DefaultBreakpoints';
-import { createContext } from 'elements/util/Context';
 
-export const [Context, useSystem] = createContext<Value>();
+export const [Provider, useSystem] = createContext<Value>();
 
 type Value = {
   elements?: Elements;
   tokens?: Tokens;
   icons?: IconBundle;
   breakpoints?: Breakpoints;
-} & Omit<I18NProviderProps, 'children'>;
+  //TODO need types from I18N lib
+} & any;
 
 type Props = {
   children: ReactNode;
@@ -44,7 +45,7 @@ export const SystemProvider = (props: Props) => {
     markdownRules,
   };
   return (
-    <Context.Provider value={value}>
+    <Provider value={value}>
       <I18NProvider bundles={bundles} lang={lang} markdownRules={markdownRules}>
         <ElementProvider elements={elements}>
           <TokenProvider tokens={tokens}>
@@ -52,6 +53,6 @@ export const SystemProvider = (props: Props) => {
           </TokenProvider>
         </ElementProvider>
       </I18NProvider>
-    </Context.Provider>
+    </Provider>
   );
 };

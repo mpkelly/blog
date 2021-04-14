@@ -23,8 +23,8 @@ const FrameStyle = {
   transform: 'scale(1)',
   overflow: 'hidden',
   width: 1350,
-  maxWidth: '98vw',
   height: 820,
+  maxWidth: '98vw',
   maxHeight: 'calc(100vh - 80px)',
 };
 

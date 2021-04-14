@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
+import { createContext } from 'react-merge-context';
 import { Elements } from './Elements';
-import { createContext } from 'elements/util/Context';
 
-export const [Context, useElements] = createContext<Elements>();
+export const [Provider, useElements] = createContext<Elements | undefined>();
 
 type Props = {
   elements?: Elements;
@@ -11,5 +11,5 @@ type Props = {
 
 export const ElementProvider = (props: Props) => {
   const { elements = {}, children } = props;
-  return <Context.Provider value={elements}>{children}</Context.Provider>;
+  return <Provider value={elements}>{children}</Provider>;
 };

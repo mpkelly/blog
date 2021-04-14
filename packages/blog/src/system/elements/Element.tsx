@@ -1,9 +1,9 @@
-import React, { CSSProperties, LegacyRef } from 'react';
+import React, { CSSProperties, Ref } from 'react';
 import merge from 'deepmerge';
 import { styled } from 'goober';
 import { getStyles } from '../StyleResolver';
 import { useElements } from './ElementProvider';
-import { I18NComponentProps, withI18N } from '@mpkelly/react-i18n';
+import { I18NComponentProps, withI18N } from 'react-with-i18n';
 import { Alias } from 'system/aliases/PropertyAlias';
 import { BreakValues } from 'system/responsive/BreakValues';
 
@@ -31,7 +31,7 @@ export type ReactElementProps<A = {}> = {
   xs?: Element & A;
   modifiers?: string;
   as?: string | React.FC;
-  ref?: LegacyRef<any>;
+  ref?: Ref<any>;
 } & I18NComponentProps;
 
 export interface ElementProps<T, A = {}>
@@ -78,7 +78,7 @@ export const getModifierStyle = (
   defaultStyle: Element = {}
 ) => {
   const { xs = {}, modifiers = '' } = props;
-  const elementStyle = useElements()[elementType] || { modifiers: {} };
+  const elementStyle = (useElements() || {})[elementType] || { modifiers: {} };
 
   //Get only the base styles
   let styles = merge(

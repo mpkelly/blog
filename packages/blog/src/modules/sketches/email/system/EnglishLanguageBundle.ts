@@ -1,4 +1,4 @@
-import { LanguageBundle } from '@mpkelly/react-i18n';
+import { LanguageBundle } from 'react-with-i18n';
 
 export const EnglishLanguageBundle: LanguageBundle = {
   test: 'Testing',

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Toolbar, useToolbarState } from 'elements/toolbar/Toolbar';
 import { EmailListItem } from './EmaiItem';
 import { Email } from '../email/Email';
@@ -7,9 +7,10 @@ import { SearchBox } from './SearchBox';
 import { Column } from 'elements/flex/Column';
 import { Text } from 'elements/text/Text';
 import { Show } from 'elements/util/Show';
+import { Resource } from '../api-client/Resource';
 
 type Props = {
-  emails: Email[];
+  resource: Resource<Email[]>;
 };
 
 const Style: Element = {
@@ -33,7 +34,7 @@ const LabelStyle = {
 };
 
 export const Emails = (props: Props) => {
-  const { emails } = props;
+  const emails = props.resource.read();
   const toolbar = useToolbarState({ loop: true });
   return (
     <Column xs={Style}>
@@ -42,7 +43,7 @@ export const Emails = (props: Props) => {
         <Text modifiers={'label'} xs={LabelStyle}>
           Today
         </Text>
-        {emails.map((email: Email, index) => (
+        {emails.map((email: Email, index: number) => (
           <>
             <EmailListItem
               {...toolbar}

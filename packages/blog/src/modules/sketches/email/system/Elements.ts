@@ -24,6 +24,9 @@ export const SystemElements: Elements = {
       accent: {
         color: 'accent.1',
       },
+      xxl: {
+        fontSize: 'xxl',
+      },
     },
   },
   paragraph: {
