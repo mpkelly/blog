@@ -1,8 +1,9 @@
+import { Status } from 'elements/image/Avatar';
+
 export type Email = {
   id: string;
   to: string[];
-  from: { name: string; email: string };
-  fromProfilePic: string;
+  from: { name: string; email: string; status?: Status; profilePic?: string };
   subject: string; //markdown
   body: string; //markdown
   attachments: Attachment[];
@@ -35,8 +36,9 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'John Smith',
       email: 'jsmith@gmail.com',
+      profilePic: 'https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
+      status: Status.Online,
     },
-    fromProfilePic: 'https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: "Photos from last weekend's gig",
     body,
@@ -52,9 +54,10 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Dave Jones',
       email: 'dave_jones@yahoo.com',
+      profilePic:
+        'https://images-na.ssl-images-amazon.com/images/M/MV5BNTk2OGU4NzktODhhOC00Nzc2LWIyNzYtOWViMjljZGFiNTMxXkEyXkFqcGdeQXVyMTE1NTQwOTk@._V1_UY256_CR12,0,172,256_AL_.jpg',
+      status: Status.Busy,
     },
-    fromProfilePic:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BNTk2OGU4NzktODhhOC00Nzc2LWIyNzYtOWViMjljZGFiNTMxXkEyXkFqcGdeQXVyMTE1NTQwOTk@._V1_UY256_CR12,0,172,256_AL_.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: "The joy of 'x' podcast",
     body,
@@ -76,8 +79,9 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Sarah Brookes',
       email: 'iamsarahb@webmail.com',
+      profilePic: 'https://randomuser.me/api/portraits/women/47.jpg',
+      status: Status.Offline,
     },
-    fromProfilePic: 'https://randomuser.me/api/portraits/women/47.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: 'FAO designers & developers',
     body:
@@ -104,8 +108,8 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Francis Lindor',
       email: 'franiscool@hotmail.com',
+      profilePic: 'https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
     },
-    fromProfilePic: 'https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: 'App update',
     body:
@@ -118,9 +122,9 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Francis Lindor',
       email: 'franiscool@hotmail.com',
+      profilePic:
+        'https://images-na.ssl-images-amazon.com/images/M/MV5BNTk2OGU4NzktODhhOC00Nzc2LWIyNzYtOWViMjljZGFiNTMxXkEyXkFqcGdeQXVyMTE1NTQwOTk@._V1_UY256_CR12,0,172,256_AL_.jpg',
     },
-    fromProfilePic:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BNTk2OGU4NzktODhhOC00Nzc2LWIyNzYtOWViMjljZGFiNTMxXkEyXkFqcGdeQXVyMTE1NTQwOTk@._V1_UY256_CR12,0,172,256_AL_.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: "Hey, what's up!?",
     body:
@@ -133,9 +137,9 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Francis Lindor',
       email: 'franiscool@hotmail.com',
+      profilePic:
+        'https://images-na.ssl-images-amazon.com/images/M/MV5BODFjZTkwMjItYzRhMS00OWYxLWI3YTUtNWIzOWQ4Yjg4NGZiXkEyXkFqcGdeQXVyMTQ0ODAxNzE@._V1_UX172_CR0,0,172,256_AL_.jpg',
     },
-    fromProfilePic:
-      'https://images-na.ssl-images-amazon.com/images/M/MV5BODFjZTkwMjItYzRhMS00OWYxLWI3YTUtNWIzOWQ4Yjg4NGZiXkEyXkFqcGdeQXVyMTQ0ODAxNzE@._V1_UX172_CR0,0,172,256_AL_.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: "Hey, what's up!?",
     body:
@@ -148,8 +152,9 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Francis Lindor',
       email: 'franiscool@hotmail.com',
+      profilePic: 'https://randomuser.me/api/portraits/women/47.jpg',
+      status: Status.Away,
     },
-    fromProfilePic: 'https://randomuser.me/api/portraits/women/47.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: 'Demo',
     body:
@@ -162,8 +167,8 @@ export const ExampleEmails: Email[] = [
     from: {
       name: 'Francis Lindor',
       email: 'franiscool@hotmail.com',
+      profilePic: 'https://uifaces.co/our-content/donated/1H_7AxP0.jpg',
     },
-    fromProfilePic: 'https://uifaces.co/our-content/donated/1H_7AxP0.jpg',
     to: ['Jane Jones <jjones@gmail.com>'],
     subject: 'Question regarding latest build',
     body:

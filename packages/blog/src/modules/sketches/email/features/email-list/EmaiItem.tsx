@@ -51,13 +51,12 @@ const DateStyle = {
 
 export const EmailListItem = (props: Props) => {
   const { email, selected, ...rest } = props;
-  const status = Math.round(Math.random() * 3);
   return (
     <ToolbarItem id={email.id} xs={Style} data-selected={selected} {...rest}>
       <Avatar
-        url={email.fromProfilePic}
+        url={email.from.profilePic}
         text={email.from.name}
-        status={status}
+        status={email.from.status}
       />
       <Column xs={MainStyle}>
         <Row xs={HeaderStyle}>

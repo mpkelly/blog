@@ -6598,6 +6598,11 @@
     "import-local" "^3.0.2"
     "jest-cli" "^25.5.4"
 
+"jotai@^0.16.0":
+  "integrity" "sha512-1DjHUnTWIZD9Qh/cM+snmgJbI13AYccqfcDu0Vs8+sXHfzUi6zNyJUKfmJAjTH6vM4y81ljooTj8jSLyQauQuw=="
+  "resolved" "https://registry.npmjs.org/jotai/-/jotai-0.16.0.tgz"
+  "version" "0.16.0"
+
 "jpjs@^1.2.1":
   "integrity" "sha512-GxJWybWU4NV0RNKi6EIqk6IRPOTqd/h+U7sbtyuD7yUISUzV78LdHnq2xkevJsTlz/EImux4sWj+wfMiwKLkiw=="
   "resolved" "https://registry.npmjs.org/jpjs/-/jpjs-1.2.1.tgz"
@@ -8804,11 +8809,6 @@
   "integrity" "sha1-IS1b/hMYMGpCD2QCuOJv85ZHqEk="
   "resolved" "https://registry.npmjs.org/proto-list/-/proto-list-1.2.4.tgz"
   "version" "1.2.4"
-
-"proxy-compare@1.1.6":
-  "integrity" "sha512-V65euKrKgKjVyEh5+4nVlAf4dHJ6Q0cF77MCeZiJaOldAl9lndy/u270SJneHiz3UkVcSIhxfOKY7aFkrMyo5g=="
-  "resolved" "https://registry.npmjs.org/proxy-compare/-/proxy-compare-1.1.6.tgz"
-  "version" "1.1.6"
 
 "proxy-middleware@latest":
   "integrity" "sha1-o/3xvvtzD5UZZYcqwvYHTGFHelY="
@@ -11213,13 +11213,6 @@
   dependencies:
     "spdx-correct" "^3.0.0"
     "spdx-expression-parse" "^3.0.0"
-
-"valtio@^0.7.1":
-  "integrity" "sha512-5z8HYqcO4GSzz/9Tho+WuJMIkIuXEz0VI5gkF2nslgPeFr6emiUY854aTZX1gt41sxs0d83ZURM68fE/SjyAOA=="
-  "resolved" "https://registry.npmjs.org/valtio/-/valtio-0.7.1.tgz"
-  "version" "0.7.1"
-  dependencies:
-    "proxy-compare" "1.1.6"
 
 "value-equal@^1.0.1":
   "integrity" "sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw=="

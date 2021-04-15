@@ -7,11 +7,7 @@ import { SearchBox } from './SearchBox';
 import { Column } from 'elements/flex/Column';
 import { Text } from 'elements/text/Text';
 import { Show } from 'elements/util/Show';
-import { Resource } from '../api-client/Resource';
-
-type Props = {
-  resource: Resource<Email[]>;
-};
+import { useEmailState } from '../email/EmailState';
 
 const Style: Element = {
   backgroundColor: 'background.2',
@@ -33,8 +29,8 @@ const LabelStyle = {
   marginLeft: 'md',
 };
 
-export const Emails = (props: Props) => {
-  const emails = props.resource.read();
+export const Emails = () => {
+  const { emails, handleSelect } = useEmailState();
   const toolbar = useToolbarState({ loop: true });
   return (
     <Column xs={Style}>
@@ -43,11 +39,12 @@ export const Emails = (props: Props) => {
         <Text modifiers={'label'} xs={LabelStyle}>
           Today
         </Text>
-        {emails.map((email: Email, index: number) => (
+        {emails.read().map((email: Email, index: number) => (
           <>
             <EmailListItem
               {...toolbar}
               selected={toolbar.currentId === email.id}
+              onClick={() => handleSelect(index)}
               email={email}
               key={email.id}
             />

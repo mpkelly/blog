@@ -2,14 +2,10 @@ import React from 'react';
 import { Article } from 'elements/flex/Article';
 import { Main } from 'elements/flex/Main';
 import { Element } from 'elements/Element';
-import { Email } from './Email';
 import { Body } from './Body';
 import { Header } from './Header';
 import { Editor } from '../compose/Editor';
-
-type Props = {
-  email: Email;
-};
+import { useEmailState } from './EmailState';
 
 const Style = {
   flex: 1,
@@ -29,8 +25,9 @@ const EditorStyle = {
   flex: '1 0 0',
 };
 
-export const Detail = (props: Props) => {
-  const { email } = props;
+export const Detail = () => {
+  const { emails, selected } = useEmailState();
+  const email = emails.read()[selected];
   return (
     <Main xs={Style}>
       <Header email={email} />

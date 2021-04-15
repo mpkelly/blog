@@ -10,7 +10,7 @@ type Props = {
 
 export const Icon = (props: Props) => {
   let { name, className, ligature: children = '', ...rest } = props;
-  const icon = name ? useIcons().icons[name] : undefined;
+  const icon = name ? (useIcons() || { icons: {} }).icons[name] : undefined;
   if (icon) {
     className = icon.className || className;
     children = icon.ligature || children;

@@ -106,10 +106,19 @@ export const SystemElements: Elements = {
       accent: {
         color: 'accent.1',
       },
+      muted: {
+        color: 'text.2',
+      },
+      danger: {
+        color: 'danger',
+      },
       logo: {
         color: 'accent.1',
         fontSize: '32px !important',
         padding: 'sm',
+      },
+      xxl: {
+        fontSize: '60px !important',
       },
     },
   },

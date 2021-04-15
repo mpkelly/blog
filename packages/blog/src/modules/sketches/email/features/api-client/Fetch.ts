@@ -10,8 +10,19 @@ import { promiseAsResource } from './Resource';
  */
 export const fetch = <T>(value: T, delay = 1) => {
   return promiseAsResource(
-    new Promise<T>((resolve) =>
-      setTimeout(() => resolve(value), Math.random() * 1000 * delay)
+    new Promise<T>((resolve, reject) =>
+      setTimeout(() => {
+        if (shouldErr()) {
+          reject(null);
+        } else {
+          resolve(value);
+        }
+      }, Math.random() * 1000 * delay)
     )
   );
 };
+/**
+ * 1 in 10 requests will be rejected - hopefully a bit more frequent
+ * than a prod app
+ */
+const shouldErr = () => Math.random() > 0.9;

@@ -12,8 +12,8 @@ import {
 } from 'elements/toolbar/Toolbar';
 import { Row } from 'elements/flex/Row';
 import { Text } from 'elements/text/Text';
-import { Thumbnail } from 'elements/image/Thumbnail';
 import { Attachments } from './Attachments';
+import { Avatar } from 'elements/image/Avatar';
 
 type Props = {
   email: Email;
@@ -85,7 +85,7 @@ export const Header = (props: Props) => {
         </Toolbar>
       </Row>
       <Row xs={SenderRowStyle}>
-        <Thumbnail src={email.fromProfilePic} />
+        <Avatar url={email.from.profilePic} status={email.from.status} />
         <Row xs={FromStyle}>
           <Text modifiers={'bold'}>{email.from.name} </Text>
           <Text modifiers={'muted'} xs={EmailAddressStyle}>

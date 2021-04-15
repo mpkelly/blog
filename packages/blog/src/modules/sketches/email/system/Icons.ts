@@ -46,5 +46,6 @@ export const SystemIcons: IconBundle = {
     quote: icon('format_quote'),
     image: icon('image'),
     video: icon('videocam'),
+    error: icon('report'),
   },
 };

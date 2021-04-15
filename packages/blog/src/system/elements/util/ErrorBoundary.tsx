@@ -11,6 +11,11 @@ type State = {
 
 export class ErrorBoundary extends React.Component<Props, State> {
   state = { hasError: false, error: null };
+
+  componentWillReceiveProps() {
+    this.setState({ hasError: false });
+  }
+
   static getDerivedStateFromError(error: any) {
     return {
       hasError: true,
