@@ -21,6 +21,7 @@ export const fetch = <T>(value: T, delay = 1) => {
     )
   );
 };
+
 /**
  * 1 in 10 requests will be rejected - hopefully a bit more frequent
  * than a prod app

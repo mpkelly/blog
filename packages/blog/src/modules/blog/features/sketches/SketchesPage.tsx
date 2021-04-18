@@ -5,6 +5,8 @@ import { Separator } from 'elements/separator/Separator';
 import { PageTitle } from '../page/PageTitle';
 import { Sketch } from './Sketch';
 import { Sketches } from './Sketches';
+import { EmailClient } from '../../../sketches/email/EmailClient';
+import { Route } from 'react-router-dom';
 
 const Style = {
   width: 'content.width',

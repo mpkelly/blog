@@ -7,13 +7,13 @@ import { Page } from '../page/Page';
 import { Loading } from '../email-list/Loading';
 import { useEmailState } from './EmailState';
 import { ErrorBoundary } from 'elements/util/ErrorBoundary';
-import { ErrorView } from './ErrorView';
+import { Error } from './Error';
 
 export default () => {
   const { handleFetchEmails } = useEmailState();
   return (
     <Page>
-      <ErrorBoundary fallback={<ErrorView onRetry={handleFetchEmails} />}>
+      <ErrorBoundary fallback={<Error onRetry={handleFetchEmails} />}>
         <Navigation />
         <Suspense fallback={<Loading />}>
           <Emails />

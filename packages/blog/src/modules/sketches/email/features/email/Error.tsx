@@ -28,7 +28,7 @@ const ButtonStyle = {
   marginLeft: 'xxl',
 };
 
-export const ErrorView = (props: Props) => {
+export const Error = (props: Props) => {
   const { onRetry } = props;
   return (
     <Centered xs={Style}>

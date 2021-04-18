@@ -29,7 +29,7 @@ export const Sketches: Sketch[] = [
       </>
     ),
     path: '/sketches/email',
-    tags: ['Valtio', 'Jest', 'Test Cafe'],
+    tags: ['Jotai', 'Suspense', 'Testing Library', 'Test Cafe'],
     previewUrl: './images/sketches/email/Email Client.png',
     dribbleUrl: 'https://dribbble.com/shots/15323825-Email-Client',
     githubUrl:

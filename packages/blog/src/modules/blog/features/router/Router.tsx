@@ -18,8 +18,8 @@ export const Router = () => {
           <Route exact path={'/projects'} component={ProjectsPage} />
           <Route exact path={'/about'} component={AboutPage} />
         </Page>
-        <Redirect from={'*'} to={'/home'} />
       </Switch>
+      <Redirect from={'*'} to={'/home'} />
     </HashRouter>
   );
 };
