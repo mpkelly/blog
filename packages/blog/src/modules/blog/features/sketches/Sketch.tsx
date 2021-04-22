@@ -22,6 +22,8 @@ const Style: Element = {
   flexDirection: 'row',
   alignItems: 'stretch',
   width: '100%',
+  marginTop: 'xxl',
+  marginBottom: 'xxl',
   modifiers: {
     reverse: {
       '[data-sketch-detail]': {
@@ -100,12 +102,11 @@ export const Sketch = (props: Props) => {
     previewUrl,
     dribbleUrl,
     githubUrl,
-    xs = {},
     modifiers,
   } = props;
   const backgroundImage = `url("${previewUrl}")`;
   return (
-    <Article key={title} xs={{ ...Style, ...xs }} modifiers={modifiers}>
+    <Article key={title} xs={Style} modifiers={modifiers}>
       <PreviewImage xs={{ ...ImageContainerStyle, backgroundImage }} />
       <Column data-sketch-detail xs={DetailsStyle}>
         <H3 xs={TitleStyle}>{title}</H3>

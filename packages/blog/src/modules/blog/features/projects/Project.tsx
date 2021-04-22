@@ -7,6 +7,7 @@ import { Paragraph } from 'elements/text/Paragraph';
 import { Row } from 'elements/flex/Row';
 import { Link } from 'elements/link/Link';
 import { Icon } from 'elements/icon/Icon';
+import { Article } from 'elements/flex/Article';
 
 type Props = {
   project: ProjectModel;
@@ -14,9 +15,11 @@ type Props = {
 } & ElementProps<any>;
 
 const Style = {
+  flexDirection: 'row',
   width: '100%',
   justifyContent: 'space-between',
   marginTop: 'xxl',
+  marginBottom: 'xxl',
   modifiers: {
     reverse: {
       '[data-project-detail]': {
@@ -68,7 +71,7 @@ export const Project = (props: Props) => {
     homepageUrl,
   } = project;
   return (
-    <Row xs={Style} modifiers={modifiers}>
+    <Article xs={Style} modifiers={modifiers}>
       <Column xs={{ ...GraphicStyle, backgroundImage }} />
       <Column xs={DetailStyle} data-project-detail>
         <H3 xs={TitleStyle}>{name}</H3>
@@ -82,6 +85,6 @@ export const Project = (props: Props) => {
           </Link>
         </Row>
       </Column>
-    </Row>
+    </Article>
   );
 };

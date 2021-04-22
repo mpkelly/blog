@@ -12,5 +12,10 @@ export const SystemIcons: IconBundle = {
     dribble: icon('dribbble-logo'),
     github: icon('github-logo'),
     home: icon('house'),
+    company: icon('buildings'),
+    location: icon('map-pin'),
+    date: icon('calendar'),
+    print: icon('printer'),
+    email: icon('envelope-simple'),
   },
 };

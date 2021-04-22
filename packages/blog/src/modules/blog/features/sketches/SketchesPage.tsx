@@ -5,18 +5,11 @@ import { Separator } from 'elements/separator/Separator';
 import { PageTitle } from '../page/PageTitle';
 import { Sketch } from './Sketch';
 import { Sketches } from './Sketches';
-import { EmailClient } from '../../../sketches/email/EmailClient';
-import { Route } from 'react-router-dom';
 
 const Style = {
   width: 'content.width',
   maxWidth: 'content.width',
   paddingTop: 'xxl',
-};
-
-const SketchStyle = {
-  marginTop: 'xxl',
-  marginBottom: 'xxl',
 };
 
 export const SketchesPage = () => {
@@ -31,14 +24,11 @@ export const SketchesPage = () => {
       </Paragraph>
       {Sketches.map((sketch, index) => {
         const isEven = index % 2 === 0;
+        const isNotLast = index + 1 < Sketches.length;
         return (
           <>
-            <Sketch
-              {...sketch}
-              xs={SketchStyle}
-              modifiers={isEven ? undefined : 'reverse'}
-            />
-            {isEven && <Separator modifiers={'horizontal'} />}
+            <Sketch {...sketch} modifiers={isEven ? undefined : 'reverse'} />
+            {isNotLast && <Separator modifiers={'horizontal'} />}
           </>
         );
       })}

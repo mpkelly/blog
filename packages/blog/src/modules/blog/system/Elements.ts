@@ -62,6 +62,11 @@ export const SystemElements: Elements = {
     fontFamily: 'headings',
     fontSize: 'lg',
   },
+  h5: {
+    color: 'text.1',
+    fontFamily: 'headings',
+    fontSize: 'primary',
+  },
   label: {
     backgroundColor: 'background.2',
     color: 'hsla(47deg, 100%, 50%, .9)',
@@ -91,6 +96,7 @@ export const SystemElements: Elements = {
   link: {
     textDecoration: 'none',
     cursor: 'pointer',
+    color: 'accent.2',
     '&:hover': {
       color: 'accent.2',
     },
@@ -128,6 +134,12 @@ export const SystemElements: Elements = {
     modifiers: {
       accent: {
         color: 'accent.1',
+      },
+      muted: {
+        color: 'text.2',
+      },
+      xl: {
+        fontSize: 60,
       },
     },
   },

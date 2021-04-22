@@ -17,7 +17,7 @@ export const Projects: Project[] = [
     name: 'journal',
     description: `A wiki with customisable interface. User can register scripts and CSS to export and modify editor content. It's available as a PWA or Chrome extension. It's only alpha for now and I am not actively developing it. `,
     githubUrl: 'https://github.com/mpkelly/journal',
-    homepageUrl: 'mpkelly.github.io/journal',
+    homepageUrl: 'https://mpkelly.github.io/journal',
     pattern: 'url(images/Whangaehu.svg)',
   },
   {
