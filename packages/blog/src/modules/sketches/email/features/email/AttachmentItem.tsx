@@ -12,21 +12,6 @@ type Props = {
   attachment: Attachment;
 } & ToolbarItemProps;
 
-const Style: Element = {
-  alignItems: 'center',
-  width: 240,
-  height: 50,
-};
-
-const ImageStyle = {
-  width: 32,
-};
-
-const TextStyle = {
-  marginRight: 'auto',
-  marginLeft: 'sm',
-};
-
 export const AttachmentItem = (props: Props) => {
   const { attachment, ...rest } = props;
   return (
@@ -41,4 +26,19 @@ export const AttachmentItem = (props: Props) => {
       </ToolbarItem>
     </Row>
   );
+};
+
+const Style: Element = {
+  alignItems: 'center',
+  width: 240,
+  height: 50,
+};
+
+const ImageStyle = {
+  width: 32,
+};
+
+const TextStyle = {
+  marginRight: 'auto',
+  marginLeft: 'sm',
 };

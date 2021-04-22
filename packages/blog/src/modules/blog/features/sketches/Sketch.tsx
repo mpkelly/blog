@@ -18,6 +18,54 @@ type Props = {
   modifiers?: 'reverse';
 } & SketchModel;
 
+export const Sketch = (props: Props) => {
+  const {
+    title,
+    description,
+    path,
+    tags,
+    previewUrl,
+    dribbleUrl,
+    githubUrl,
+    modifiers,
+  } = props;
+  const backgroundImage = `url("${previewUrl}")`;
+  return (
+    <Article key={title} xs={Style} modifiers={modifiers}>
+      <PreviewImage xs={{ ...ImageContainerStyle, backgroundImage }} />
+      <Column data-sketch-detail xs={DetailsStyle}>
+        <H3 xs={TitleStyle}>{title}</H3>
+        {description}
+        <Row xs={DetailsRow}>
+          <Row xs={LabelsStyle}>
+            {tags.map((tag) => (
+              <Label key={tag}>{tag}</Label>
+            ))}
+          </Row>
+          <Row xs={LinksStyle}>
+            <Link href={dribbleUrl} {...LinkProps}>
+              <Icon name={'dribble'} />
+            </Link>
+            <Link href={githubUrl} {...LinkProps}>
+              <Icon name={'github'} />
+            </Link>
+          </Row>
+        </Row>
+        <NavLink to={path} xs={ButtonStyle}>
+          <Button modifiers={'clear'}>
+            <Text modifiers={'accent'}>Take a look</Text>
+            <Icon
+              name={'right_arrow'}
+              modifiers={'accent'}
+              xs={ButtonIconStyle}
+            />
+          </Button>
+        </NavLink>
+      </Column>
+    </Article>
+  );
+};
+
 const Style: Element = {
   flexDirection: 'row',
   alignItems: 'stretch',
@@ -91,54 +139,6 @@ const ButtonIconStyle = {
 const LinkProps = {
   xs: IconStyle,
   target: '_blank',
-};
-
-export const Sketch = (props: Props) => {
-  const {
-    title,
-    description,
-    path,
-    tags,
-    previewUrl,
-    dribbleUrl,
-    githubUrl,
-    modifiers,
-  } = props;
-  const backgroundImage = `url("${previewUrl}")`;
-  return (
-    <Article key={title} xs={Style} modifiers={modifiers}>
-      <PreviewImage xs={{ ...ImageContainerStyle, backgroundImage }} />
-      <Column data-sketch-detail xs={DetailsStyle}>
-        <H3 xs={TitleStyle}>{title}</H3>
-        {description}
-        <Row xs={DetailsRow}>
-          <Row xs={LabelsStyle}>
-            {tags.map((tag) => (
-              <Label key={tag}>{tag}</Label>
-            ))}
-          </Row>
-          <Row xs={LinksStyle}>
-            <Link href={dribbleUrl} {...LinkProps}>
-              <Icon name={'dribble'} />
-            </Link>
-            <Link href={githubUrl} {...LinkProps}>
-              <Icon name={'github'} />
-            </Link>
-          </Row>
-        </Row>
-        <NavLink to={path} xs={ButtonStyle}>
-          <Button modifiers={'clear'}>
-            <Text modifiers={'accent'}>Take a look</Text>
-            <Icon
-              name={'right_arrow'}
-              modifiers={'accent'}
-              xs={ButtonIconStyle}
-            />
-          </Button>
-        </NavLink>
-      </Column>
-    </Article>
-  );
 };
 
 const PreviewImage = styled(Column)`

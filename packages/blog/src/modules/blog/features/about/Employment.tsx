@@ -8,26 +8,6 @@ import { Paragraph } from 'system/elements/text/Paragraph';
 import { ElementProps } from 'elements/Element';
 import { Link } from 'elements/link/Link';
 
-const Style = {
-  'h5:first-of-type': {
-    marginTop: 'lg',
-  },
-  'h5:not(:first-of-type)': {
-    marginTop: 'xl',
-  },
-};
-
-const DetailsStyle = {
-  marginBottom: 'md',
-  alignItems: 'center',
-  '*': {
-    marginRight: 'md',
-  },
-  '[data-value]': {
-    marginRight: 'lg',
-  },
-};
-
 export const Employment = (props: ElementProps<any>) => {
   const { xs, ...rest } = props;
   return (
@@ -115,4 +95,24 @@ export const Employment = (props: ElementProps<any>) => {
       </Paragraph>
     </Column>
   );
+};
+
+const Style = {
+  'h5:first-of-type': {
+    marginTop: 'lg',
+  },
+  'h5:not(:first-of-type)': {
+    marginTop: 'xl',
+  },
+};
+
+const DetailsStyle = {
+  marginBottom: 'md',
+  alignItems: 'center',
+  '*': {
+    marginRight: 'md',
+  },
+  '[data-value]': {
+    marginRight: 'lg',
+  },
 };

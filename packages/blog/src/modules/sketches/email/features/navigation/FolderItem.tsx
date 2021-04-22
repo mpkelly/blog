@@ -13,6 +13,21 @@ type Props = {
   badgeModifiers?: string;
 } & ToolbarItemProps;
 
+export const FolderItem = (props: Props) => {
+  const { icon, name, count, selected, badgeModifiers = '', ...rest } = props;
+  return (
+    <ToolbarItem xs={ItemStyle} data-selected={selected} {...rest}>
+      <Icon name={icon} />
+      <Text xs={TextStyle}>{name}</Text>
+      {count && (
+        <Badge xs={BadgeStyle} modifiers={badgeModifiers}>
+          {count}
+        </Badge>
+      )}
+    </ToolbarItem>
+  );
+};
+
 const ItemStyle: Element = {
   alignItems: 'center',
   height: 'navitem.height',
@@ -27,19 +42,4 @@ const TextStyle: Element = {
 
 const BadgeStyle: Element = {
   marginLeft: 'auto',
-};
-
-export const FolderItem = (props: Props) => {
-  const { icon, name, count, selected, badgeModifiers = '', ...rest } = props;
-  return (
-    <ToolbarItem xs={ItemStyle} data-selected={selected} {...rest}>
-      <Icon name={icon} />
-      <Text xs={TextStyle}>{name}</Text>
-      {count && (
-        <Badge xs={BadgeStyle} modifiers={badgeModifiers}>
-          {count}
-        </Badge>
-      )}
-    </ToolbarItem>
-  );
 };

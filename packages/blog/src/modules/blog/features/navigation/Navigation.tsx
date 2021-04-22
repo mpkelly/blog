@@ -6,19 +6,6 @@ import { Text } from 'elements/text/Text';
 import { Link } from './Link';
 import { ElementProps } from 'elements/Element';
 
-const ListStyle = {
-  marginLeft: 'auto',
-  padding: 'md',
-};
-
-const ListItemStyle = {
-  marginLeft: 'lg',
-};
-
-const LinkProps = {
-  activeClassName: 'link-active',
-};
-
 export const Navigation = (props: ElementProps<HTMLDivElement>) => {
   return (
     <Nav {...props}>
@@ -46,4 +33,17 @@ export const Navigation = (props: ElementProps<HTMLDivElement>) => {
       </List>
     </Nav>
   );
+};
+
+const ListStyle = {
+  marginLeft: 'auto',
+  padding: 'md',
+};
+
+const ListItemStyle = {
+  marginLeft: 'lg',
+};
+
+const LinkProps = {
+  activeClassName: 'link-active',
 };

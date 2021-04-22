@@ -8,6 +8,22 @@ type Props = {
   backgroundColor: string;
 };
 
+export const Frame = (props: Props) => {
+  const { backgroundColor, children } = props;
+  return (
+    <Centered xs={{ ...Style, backgroundColor }}>
+      <Column xs={FrameStyle}>
+        <Row xs={ToolbarStyle}>
+          <Row xs={CloseStyle} />
+          <Row xs={MinimizeStyle} />
+          <Row xs={ExpandStyle} />
+        </Row>
+        {children}
+      </Column>
+    </Centered>
+  );
+};
+
 const Style = {
   overflow: 'hidden',
   alignItems: 'center',
@@ -52,20 +68,4 @@ const MinimizeStyle = {
 const ExpandStyle = {
   ...CircleStyle,
   backgroundColor: 'success',
-};
-
-export const Frame = (props: Props) => {
-  const { backgroundColor, children } = props;
-  return (
-    <Centered xs={{ ...Style, backgroundColor }}>
-      <Column xs={FrameStyle}>
-        <Row xs={ToolbarStyle}>
-          <Row xs={CloseStyle} />
-          <Row xs={MinimizeStyle} />
-          <Row xs={ExpandStyle} />
-        </Row>
-        {children}
-      </Column>
-    </Centered>
-  );
 };

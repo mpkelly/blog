@@ -8,10 +8,6 @@ type Props = {
   title: string;
 };
 
-const TitleStyle: Element = {
-  alignItems: 'baseline',
-};
-
 export const PageTitle = (props: Props) => {
   const { title } = props;
   return (
@@ -27,6 +23,10 @@ export const PageTitle = (props: Props) => {
       ))}
     </Title>
   );
+};
+
+const TitleStyle: Element = {
+  alignItems: 'baseline',
 };
 
 const Title = styled(Row)`

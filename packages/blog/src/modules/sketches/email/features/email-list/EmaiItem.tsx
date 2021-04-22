@@ -14,6 +14,35 @@ type Props = {
   email: Email;
 } & ToolbarItemProps;
 
+export const EmailListItem = (props: Props) => {
+  const { email, selected, ...rest } = props;
+  return (
+    <ToolbarItem id={email.id} xs={Style} data-selected={selected} {...rest}>
+      <Avatar
+        url={email.from.profilePic}
+        text={email.from.name}
+        status={email.from.status}
+      />
+      <Column xs={MainStyle}>
+        <Row xs={HeaderStyle}>
+          <Text modifiers={'muted'}>{email.from.name}</Text>
+          <Text modifiers={'small muted'} xs={DateStyle}>
+            {email.date}
+          </Text>
+        </Row>
+        <Row xs={HeaderStyle}>
+          <Text modifiers={'bold'}>{email.subject}</Text>
+          <Show when={email.attachments.length}>
+            <Icon name={'attachment'} modifiers={'small accent'} />
+          </Show>
+        </Row>
+
+        <Text xs={PreviewStyle}>{email.body}</Text>
+      </Column>
+    </ToolbarItem>
+  );
+};
+
 const Style: Element = {
   alignSelf: 'flex-start',
   borderBottom: '1px solid',
@@ -47,33 +76,4 @@ const PreviewStyle = {
 
 const DateStyle = {
   marginLeft: 'auto',
-};
-
-export const EmailListItem = (props: Props) => {
-  const { email, selected, ...rest } = props;
-  return (
-    <ToolbarItem id={email.id} xs={Style} data-selected={selected} {...rest}>
-      <Avatar
-        url={email.from.profilePic}
-        text={email.from.name}
-        status={email.from.status}
-      />
-      <Column xs={MainStyle}>
-        <Row xs={HeaderStyle}>
-          <Text modifiers={'muted'}>{email.from.name}</Text>
-          <Text modifiers={'small muted'} xs={DateStyle}>
-            {email.date}
-          </Text>
-        </Row>
-        <Row xs={HeaderStyle}>
-          <Text modifiers={'bold'}>{email.subject}</Text>
-          <Show when={email.attachments.length}>
-            <Icon name={'attachment'} modifiers={'small accent'} />
-          </Show>
-        </Row>
-
-        <Text xs={PreviewStyle}>{email.body}</Text>
-      </Column>
-    </ToolbarItem>
-  );
 };

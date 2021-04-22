@@ -4,12 +4,6 @@ import { Row } from 'elements/flex/Row';
 import { styled } from 'goober';
 import { ReactElementProps } from 'elements/Element';
 
-const Style = {
-  width: 'emaillist.width',
-  height: '100%',
-  padding: 'md',
-};
-
 export const Loading = () => {
   return (
     <Column xs={Style}>
@@ -23,6 +17,12 @@ export const Loading = () => {
       <Skeleton />
     </Column>
   );
+};
+
+const Style = {
+  width: 'emaillist.width',
+  height: '100%',
+  padding: 'md',
 };
 
 const SkeletonStyle = {

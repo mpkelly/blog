@@ -7,6 +7,20 @@ import { Header } from './Header';
 import { Editor } from '../compose/Editor';
 import { useEmailState } from './EmailState';
 
+export const Detail = () => {
+  const { emails, selected } = useEmailState();
+  const email = emails.read()[selected];
+  return (
+    <Main xs={Style}>
+      <Header email={email} />
+      <Article xs={ArticleStyle}>
+        <Body body={email.body} />
+      </Article>
+      <Editor xs={EditorStyle} />
+    </Main>
+  );
+};
+
 const Style = {
   flex: 1,
   overflow: 'hidden',
@@ -23,18 +37,4 @@ const ArticleStyle: Element = {
 const EditorStyle = {
   width: '100%',
   flex: '1 0 0',
-};
-
-export const Detail = () => {
-  const { emails, selected } = useEmailState();
-  const email = emails.read()[selected];
-  return (
-    <Main xs={Style}>
-      <Header email={email} />
-      <Article xs={ArticleStyle}>
-        <Body body={email.body} />
-      </Article>
-      <Editor xs={EditorStyle} />
-    </Main>
-  );
 };

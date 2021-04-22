@@ -8,19 +8,6 @@ import {
 import { useToolbarState } from 'reakit';
 import { Separator } from 'elements/separator/Separator';
 
-const Style = {
-  alignItems: 'center',
-  padding: 'xs',
-  borderTop: '1px solid',
-  borderColor: 'border.1',
-  width: '100%',
-};
-
-const IconStyle = {
-  marginLeft: 'xs',
-  marginRight: 'xs',
-};
-
 export const Toolbar = (props: ReactElementProps) => {
   const toolbar = useToolbarState({ loop: true });
   return (
@@ -76,4 +63,17 @@ export const Toolbar = (props: ReactElementProps) => {
       </ToolbarItem>
     </SystenToolbar>
   );
+};
+
+const Style = {
+  alignItems: 'center',
+  padding: 'xs',
+  borderTop: '1px solid',
+  borderColor: 'border.1',
+  width: '100%',
+};
+
+const IconStyle = {
+  marginLeft: 'xs',
+  marginRight: 'xs',
 };

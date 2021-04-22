@@ -9,14 +9,6 @@ import { Frame } from '../../blog/features/frame/Frame';
 import { SystemLanguages } from './system/SystemLanguages';
 import { Router } from './features/router/Router';
 
-const Style = {
-  backgroundColor: 'background.1',
-  overflow: 'hidden',
-  width: '100%',
-  height: 820,
-  borderRadius: 'md',
-};
-
 export const EmailClient = () => {
   return (
     <SystemProvider
@@ -37,4 +29,12 @@ export const EmailClient = () => {
       </Frame>
     </SystemProvider>
   );
+};
+
+const Style = {
+  backgroundColor: 'background.1',
+  overflow: 'hidden',
+  width: '100%',
+  height: 820,
+  borderRadius: 'md',
 };

@@ -4,6 +4,16 @@ import { Input, useInput } from 'elements/input/Input';
 import { Icon } from 'elements/icon/Icon';
 import { Element } from 'elements/Element';
 
+export const SearchBox = () => {
+  const input = useInput();
+  return (
+    <Row xs={Style}>
+      <Icon name={'search'} xs={IconStyle} />
+      <Input {...input} placeholder={'Search email'} xs={InputStyle} />
+    </Row>
+  );
+};
+
 const Style: Element = {
   position: 'relative',
   alignItems: 'center',
@@ -21,14 +31,4 @@ const IconStyle: Element = {
 const InputStyle = {
   paddingLeft: 36,
   flex: 1,
-};
-
-export const SearchBox = () => {
-  const input = useInput();
-  return (
-    <Row xs={Style}>
-      <Icon name={'search'} xs={IconStyle} />
-      <Input {...input} placeholder={'Search email'} xs={InputStyle} />
-    </Row>
-  );
 };

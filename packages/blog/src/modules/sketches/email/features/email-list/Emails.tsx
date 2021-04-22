@@ -9,26 +9,6 @@ import { Text } from 'elements/text/Text';
 import { Show } from 'elements/util/Show';
 import { useEmailState } from '../email/EmailState';
 
-const Style: Element = {
-  backgroundColor: 'background.2',
-  borderRight: '1px solid',
-  borderColor: 'border.1',
-  flexDirection: 'column',
-};
-
-const ListStyle: Element = {
-  flexDirection: 'column',
-  width: 'emaillist.width',
-  overflowY: 'auto',
-  padding: 'md',
-};
-
-const LabelStyle = {
-  marginTop: 'lg',
-  marginBottom: 'lg',
-  marginLeft: 'md',
-};
-
 export const Emails = () => {
   const { emails, handleSelect } = useEmailState();
   const toolbar = useToolbarState({ loop: true });
@@ -58,4 +38,24 @@ export const Emails = () => {
       </Toolbar>
     </Column>
   );
+};
+
+const Style: Element = {
+  backgroundColor: 'background.2',
+  borderRight: '1px solid',
+  borderColor: 'border.1',
+  flexDirection: 'column',
+};
+
+const ListStyle: Element = {
+  flexDirection: 'column',
+  width: 'emaillist.width',
+  overflowY: 'auto',
+  padding: 'md',
+};
+
+const LabelStyle = {
+  marginTop: 'lg',
+  marginBottom: 'lg',
+  marginLeft: 'md',
 };

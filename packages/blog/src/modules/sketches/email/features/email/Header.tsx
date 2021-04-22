@@ -19,47 +19,6 @@ type Props = {
   email: Email;
 };
 
-const Style: Element = {
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: 'lg',
-  paddingTop: 0,
-  backgroundColor: 'background.2',
-  borderRadius: 'sm',
-  width: '100%',
-};
-
-const SenderRowStyle = {
-  paddingTop: 'lg',
-  alignItems: 'center',
-};
-
-const TitleRowStyle = {
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  color: 'text.2',
-  width: '100%',
-};
-
-const FromStyle: Element = {
-  marginLeft: 'md',
-  marginRight: 'auto',
-};
-
-const EmailAddressStyle = {
-  marginLeft: 'sm',
-};
-
-const DateStyle = { marginLeft: 'md' };
-
-const ToolbarStyle = {
-  alignItems: 'center',
-};
-
-const IconStyle = {
-  marginLeft: 'sm',
-};
-
 export const Header = (props: Props) => {
   const { email } = props;
   const toolbar = useToolbarState({ loop: true });
@@ -99,4 +58,45 @@ export const Header = (props: Props) => {
       </Row>
     </SystemHeader>
   );
+};
+
+const Style: Element = {
+  flexDirection: 'column',
+  justifyContent: 'center',
+  padding: 'lg',
+  paddingTop: 0,
+  backgroundColor: 'background.2',
+  borderRadius: 'sm',
+  width: '100%',
+};
+
+const SenderRowStyle = {
+  paddingTop: 'lg',
+  alignItems: 'center',
+};
+
+const TitleRowStyle = {
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  color: 'text.2',
+  width: '100%',
+};
+
+const FromStyle: Element = {
+  marginLeft: 'md',
+  marginRight: 'auto',
+};
+
+const EmailAddressStyle = {
+  marginLeft: 'sm',
+};
+
+const DateStyle = { marginLeft: 'md' };
+
+const ToolbarStyle = {
+  alignItems: 'center',
+};
+
+const IconStyle = {
+  marginLeft: 'sm',
 };

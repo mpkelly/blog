@@ -14,6 +14,34 @@ type Props = {
   modifiers?: string;
 } & ElementProps<any>;
 
+export const Project = (props: Props) => {
+  const { project, modifiers = '' } = props;
+  const {
+    name,
+    description,
+    pattern: backgroundImage,
+    githubUrl,
+    homepageUrl,
+  } = project;
+  return (
+    <Article xs={Style} modifiers={modifiers}>
+      <Column xs={{ ...GraphicStyle, backgroundImage }} />
+      <Column xs={DetailStyle} data-project-detail>
+        <H3 xs={TitleStyle}>{name}</H3>
+        <Paragraph modifiers={'muted'}>{description}</Paragraph>
+        <Row xs={LinksStyle}>
+          <Link href={homepageUrl} {...LinkProps}>
+            <Icon name={'home'} />
+          </Link>
+          <Link href={githubUrl} {...LinkProps}>
+            <Icon name={'github'} />
+          </Link>
+        </Row>
+      </Column>
+    </Article>
+  );
+};
+
 const Style = {
   flexDirection: 'row',
   width: '100%',
@@ -59,32 +87,4 @@ const GraphicStyle = {
   height: 240,
   backgroundSize: '100%',
   flexShrink: 0,
-};
-
-export const Project = (props: Props) => {
-  const { project, modifiers = '' } = props;
-  const {
-    name,
-    description,
-    pattern: backgroundImage,
-    githubUrl,
-    homepageUrl,
-  } = project;
-  return (
-    <Article xs={Style} modifiers={modifiers}>
-      <Column xs={{ ...GraphicStyle, backgroundImage }} />
-      <Column xs={DetailStyle} data-project-detail>
-        <H3 xs={TitleStyle}>{name}</H3>
-        <Paragraph modifiers={'muted'}>{description}</Paragraph>
-        <Row xs={LinksStyle}>
-          <Link href={homepageUrl} {...LinkProps}>
-            <Icon name={'home'} />
-          </Link>
-          <Link href={githubUrl} {...LinkProps}>
-            <Icon name={'github'} />
-          </Link>
-        </Row>
-      </Column>
-    </Article>
-  );
 };

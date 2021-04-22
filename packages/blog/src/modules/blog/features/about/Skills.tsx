@@ -5,15 +5,6 @@ import { H3 } from 'elements/text/Headings';
 import { Column } from 'system/elements/flex/Column';
 import { ElementProps } from 'elements/Element';
 
-const Style = {
-  flexWrap: 'wrap',
-  marginTop: 'lg',
-  '*': {
-    marginRight: 'md',
-    marginBottom: 'lg',
-  },
-};
-
 export const Skills = (props: ElementProps<any>) => {
   return (
     <Column {...props}>
@@ -33,4 +24,13 @@ export const Skills = (props: ElementProps<any>) => {
       </Row>
     </Column>
   );
+};
+
+const Style = {
+  flexWrap: 'wrap',
+  marginTop: 'lg',
+  '*': {
+    marginRight: 'md',
+    marginBottom: 'lg',
+  },
 };

@@ -5,12 +5,6 @@ import { Projects } from './Projects';
 import { Project } from './Project';
 import { Separator } from 'elements/separator/Separator';
 
-const Style = {
-  width: 'content.width',
-  maxWidth: 'content.width',
-  paddingTop: 'xxl',
-};
-
 export const ProjectsPage = () => {
   return (
     <Main xs={Style}>
@@ -31,4 +25,10 @@ export const ProjectsPage = () => {
       })}
     </Main>
   );
+};
+
+const Style = {
+  width: 'content.width',
+  maxWidth: 'content.width',
+  paddingTop: 'xxl',
 };

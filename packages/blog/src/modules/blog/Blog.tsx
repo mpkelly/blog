@@ -4,7 +4,7 @@ import { SystemIcons } from './system/Icons';
 import { Router } from './features/router/Router';
 import { SystemElements } from './system/Elements';
 import { SystemTokens } from './system/Tokens';
-import { RootLanguageBundle } from 'system/ExampleLanguage';
+import { RootLanguageBundle } from 'system/i18n/ExampleLanguage';
 
 export const Blog = () => {
   return (

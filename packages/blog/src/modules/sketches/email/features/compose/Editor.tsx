@@ -7,6 +7,23 @@ import { Toolbar } from './Toolbar';
 import { Footer } from 'elements/flex/Footer';
 import { Button } from 'elements/button/Button';
 
+export const Editor = (props: ReactElementProps) => {
+  const { xs = {}, ...rest } = props;
+  const input = useInput();
+  return (
+    <Column xs={{ ...Style, ...xs }} {...rest}>
+      <Toolbar />
+      <Textarea onChange={input.onChange} xs={TextareaStyle} spellCheck={false}>
+        {Value}
+      </Textarea>
+      <Footer xs={FooterStyle}>
+        <Button modifiers={'clear text'}>Save as draft</Button>
+        <Button xs={SendButtonStyle}>Send</Button>
+      </Footer>
+    </Column>
+  );
+};
+
 const Style = {
   padding: 'md',
   overflow: 'hidden',
@@ -37,20 +54,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Regards
 `.trim();
-
-export const Editor = (props: ReactElementProps) => {
-  const { xs = {}, ...rest } = props;
-  const input = useInput();
-  return (
-    <Column xs={{ ...Style, ...xs }} {...rest}>
-      <Toolbar />
-      <Textarea onChange={input.onChange} xs={TextareaStyle} spellCheck={false}>
-        {Value}
-      </Textarea>
-      <Footer xs={FooterStyle}>
-        <Button modifiers={'clear text'}>Save as draft</Button>
-        <Button xs={SendButtonStyle}>Send</Button>
-      </Footer>
-    </Column>
-  );
-};

@@ -11,26 +11,6 @@ import { Row } from 'elements/flex/Row';
 import { Icon } from 'elements/icon/Icon';
 import { Column } from 'elements/flex/Column';
 
-const Style: Element = {
-  flexDirection: 'column',
-  width: '100%',
-  overflowY: 'hidden',
-};
-
-const LabelListStyle: Element = {
-  overflowY: 'auto',
-};
-
-const LabelStyle = {
-  marginTop: 'md',
-  marginLeft: 'lg',
-};
-
-const AddButtonStyle: Element = {
-  marginLeft: 'auto',
-  marginRight: 'md',
-};
-
 export const Labels = () => {
   const toolbar = useToolbarState({ loop: true });
   return (
@@ -54,4 +34,24 @@ export const Labels = () => {
       </Column>
     </Toolbar>
   );
+};
+
+const Style: Element = {
+  flexDirection: 'column',
+  width: '100%',
+  overflowY: 'hidden',
+};
+
+const LabelListStyle: Element = {
+  overflowY: 'auto',
+};
+
+const LabelStyle = {
+  marginTop: 'md',
+  marginLeft: 'lg',
+};
+
+const AddButtonStyle: Element = {
+  marginLeft: 'auto',
+  marginRight: 'md',
 };

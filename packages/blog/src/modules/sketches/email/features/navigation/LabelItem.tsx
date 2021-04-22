@@ -10,6 +10,19 @@ type Props = {
   name: string;
 } & ToolbarItemProps;
 
+export const LabelItem = (props: Props) => {
+  const { color, name, ...rest } = props;
+  return (
+    <ToolbarItem xs={Style} {...rest}>
+      <Icon name={'label'} xs={{ color }} />
+      <Text xs={TextStyle}>{name}</Text>
+      <Button data-id={'remove-label'} modifiers={'clear'}>
+        <Icon name={'remove'} modifiers={'small'} />
+      </Button>
+    </ToolbarItem>
+  );
+};
+
 const Style: Element = {
   alignItems: 'center',
   height: 'navitem.height',
@@ -25,17 +38,4 @@ const Style: Element = {
 
 const TextStyle = {
   marginLeft: 'md',
-};
-
-export const LabelItem = (props: Props) => {
-  const { color, name, ...rest } = props;
-  return (
-    <ToolbarItem xs={Style} {...rest}>
-      <Icon name={'label'} xs={{ color }} />
-      <Text xs={TextStyle}>{name}</Text>
-      <Button data-id={'remove-label'} modifiers={'clear'}>
-        <Icon name={'remove'} modifiers={'small'} />
-      </Button>
-    </ToolbarItem>
-  );
 };

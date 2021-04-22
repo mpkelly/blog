@@ -16,15 +16,6 @@ type Props = {
   email: Email;
 } & ToolbarItemProps;
 
-const AttachmentsStyle = {
-  alignItems: 'center',
-};
-
-const AttachmentsIconStyle = {
-  marginRight: 'sm',
-  marginTop: 1,
-};
-
 export const Attachments = (props: Props) => {
   const { email, ...rest } = props;
   const popover = usePopoverState();
@@ -55,4 +46,13 @@ export const Attachments = (props: Props) => {
       </Popover>
     </>
   );
+};
+
+const AttachmentsStyle = {
+  alignItems: 'center',
+};
+
+const AttachmentsIconStyle = {
+  marginRight: 'sm',
+  marginTop: 1,
 };

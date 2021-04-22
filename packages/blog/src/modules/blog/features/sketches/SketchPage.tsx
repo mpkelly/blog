@@ -9,15 +9,6 @@ type Props = {
   children: ReactNode;
 };
 
-const LinkStyle: Element = {
-  position: 'absolute',
-  top: 8,
-  left: 8,
-  display: 'inline-flex',
-  color: 'text.1',
-  alignItems: 'center',
-};
-
 export const SketchPage = (props: Props) => {
   const { children } = props;
   return (
@@ -29,4 +20,13 @@ export const SketchPage = (props: Props) => {
       </Link>
     </>
   );
+};
+
+const LinkStyle: Element = {
+  position: 'absolute',
+  top: 8,
+  left: 8,
+  display: 'inline-flex',
+  color: 'text.1',
+  alignItems: 'center',
 };

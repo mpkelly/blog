@@ -10,6 +10,23 @@ type Props = {
   onRetry(): void;
 };
 
+export const Error = (props: Props) => {
+  const { onRetry } = props;
+  return (
+    <Centered xs={Style}>
+      <Column>
+        <Row xs={ContentStyle}>
+          <Icon name={'error'} xs={IconStyle} modifiers={'xxl muted'} />
+          <Text modifiers={'xxl muted'}>Unable to fetch emails</Text>
+        </Row>
+        <Button xs={ButtonStyle} modifiers={'clear text'} onClick={onRetry}>
+          Try again?
+        </Button>
+      </Column>
+    </Centered>
+  );
+};
+
 const Style = {
   flex: 1,
   width: '100%',
@@ -26,21 +43,4 @@ const IconStyle = {
 
 const ButtonStyle = {
   marginLeft: 'xxl',
-};
-
-export const Error = (props: Props) => {
-  const { onRetry } = props;
-  return (
-    <Centered xs={Style}>
-      <Column>
-        <Row xs={ContentStyle}>
-          <Icon name={'error'} xs={IconStyle} modifiers={'xxl muted'} />
-          <Text modifiers={'xxl muted'}>Unable to fetch emails</Text>
-        </Row>
-        <Button xs={ButtonStyle} modifiers={'clear text'} onClick={onRetry}>
-          Try again?
-        </Button>
-      </Column>
-    </Centered>
-  );
 };

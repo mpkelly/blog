@@ -7,6 +7,16 @@ type Props = {
   children: JSX.Element | JSX.Element[];
 };
 
+export const Page = (props: Props) => {
+  const { children } = props;
+  return (
+    <Column xs={Style}>
+      <Header />
+      <Column xs={ContentStyle}>{children}</Column>
+    </Column>
+  );
+};
+
 const Style = {
   width: '100vw',
   height: '100vh',
@@ -19,14 +29,4 @@ const ContentStyle: Element = {
   width: '100%',
   overflowY: 'auto',
   alignItems: 'center',
-};
-
-export const Page = (props: Props) => {
-  const { children } = props;
-  return (
-    <Column xs={Style}>
-      <Header />
-      <Column xs={ContentStyle}>{children}</Column>
-    </Column>
-  );
 };

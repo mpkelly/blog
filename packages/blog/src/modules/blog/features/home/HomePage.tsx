@@ -5,12 +5,6 @@ import { Paragraph } from 'elements/text/Paragraph';
 import { Link } from '../navigation/Link';
 import { H3 } from 'elements/text/Headings';
 
-const Style = {
-  width: 'content.width',
-  maxWidth: 'content.width',
-  paddingTop: 'xxl',
-};
-
 export const HomePage = () => {
   return (
     <Main xs={Style}>
@@ -31,4 +25,10 @@ export const HomePage = () => {
       <H3>Latest Articles</H3>
     </Main>
   );
+};
+
+const Style = {
+  width: 'content.width',
+  maxWidth: 'content.width',
+  paddingTop: 'xxl',
 };

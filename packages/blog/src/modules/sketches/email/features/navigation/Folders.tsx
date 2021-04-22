@@ -5,23 +5,6 @@ import { Toolbar, useToolbarState } from 'elements/toolbar/Toolbar';
 import { Element } from 'elements/Element';
 import { Column } from 'elements/flex/Column';
 
-const Style: Element = {
-  flexDirection: 'column',
-  width: '100%',
-  overflow: 'hidden',
-};
-
-const ButtonStyle: Element = {
-  marginBottom: 'lg',
-};
-
-const FoldersListStyle: Element = {
-  overflowY: 'auto',
-  button: {
-    width: '100%',
-  },
-};
-
 export const MailFolders = () => {
   const toolbar = useToolbarState({ loop: true });
   return (
@@ -56,4 +39,21 @@ export const MailFolders = () => {
       </Column>
     </Toolbar>
   );
+};
+
+const Style: Element = {
+  flexDirection: 'column',
+  width: '100%',
+  overflow: 'hidden',
+};
+
+const ButtonStyle: Element = {
+  marginBottom: 'lg',
+};
+
+const FoldersListStyle: Element = {
+  overflowY: 'auto',
+  button: {
+    width: '100%',
+  },
 };

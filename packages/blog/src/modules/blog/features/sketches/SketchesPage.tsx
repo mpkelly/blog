@@ -6,12 +6,6 @@ import { PageTitle } from '../page/PageTitle';
 import { Sketch } from './Sketch';
 import { Sketches } from './Sketches';
 
-const Style = {
-  width: 'content.width',
-  maxWidth: 'content.width',
-  paddingTop: 'xxl',
-};
-
 export const SketchesPage = () => {
   return (
     <Main xs={Style}>
@@ -34,4 +28,10 @@ export const SketchesPage = () => {
       })}
     </Main>
   );
+};
+
+const Style = {
+  width: 'content.width',
+  maxWidth: 'content.width',
+  paddingTop: 'xxl',
 };
