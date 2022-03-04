@@ -23,8 +23,8 @@ const Price = styled(H3, {
 });
 const Description = styled(Paragraph, { color: '$text-2', fontSize: '$sm' });
 
-const Item = styled(Row, { gap: '$xl', alignItems: 'center' });
-const ItemDetails = styled(Column, { gap: '$lg' });
+const Product = styled(Row, { gap: '$xl', alignItems: 'center' });
+const ProductDetails = styled(Column, { gap: '$lg' });
 
 const Terms = styled(Row, {
   gap: '$md',
@@ -42,8 +42,8 @@ const Terms = styled(Row, {
 export const Products = () => {
   return (
     <Root>
-      <Item>
-        <ItemDetails>
+      <Product>
+        <ProductDetails>
           <Headline>
             <Name>Digital Nomad Worldwide insurance package</Name>
             <BestPrice>Best Price</BestPrice>
@@ -59,20 +59,20 @@ export const Products = () => {
             <DocumentIcon />
             <Text>View terms & conditions</Text>
           </Terms>
-        </ItemDetails>
+        </ProductDetails>
 
         <Switch checked>
           <Thumb />
         </Switch>
-      </Item>
+      </Product>
       <InfoBox>
         Pay annually to receive the biggest available discount. You will be
         contacted again <strong>1 month</strong> before the next payment is due.
       </InfoBox>
 
       <Separator />
-      <Item>
-        <ItemDetails>
+      <Product>
+        <ProductDetails>
           <Headline>
             <Name>Annual Mobile Phone insurance package</Name>
             <Price>$199 / year</Price>
@@ -86,11 +86,11 @@ export const Products = () => {
             <DocumentIcon />
             <Text>View terms & conditions</Text>
           </Terms>
-        </ItemDetails>
+        </ProductDetails>
         <Switch checked>
           <Thumb />
         </Switch>
-      </Item>
+      </Product>
 
       <InfoBox warning>
         Maximum of <strong>1 claim</strong> per year. See terms & conditions for
