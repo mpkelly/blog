@@ -1,7 +1,7 @@
 import React from 'react';
 import { Column, Row, styled } from '@mpkelly/ui';
 import { checkoutApp } from './ui/theme/theme';
-import { SketchAppPreview } from '../SketchAppPreview';
+import { SketchAppPreview } from '../../SketchAppPreview';
 import { Header } from './Header';
 import { Products } from './Products';
 import { Summary } from './Summary';
@@ -9,34 +9,43 @@ import { Payment } from './Payment';
 
 const Root = styled(Column, {
   size: '100%',
-  overflow: 'hidden',
   p: '$lg',
+  flexShrink: 0,
   alignItems: 'center',
+  mb: '$xl',
+  overflow: 'hidden',
+  fontFamily: '$main',
+  fontWeight: '$normal',
+  fontSize: '$regular',
+  lineHeight: '$none',
+  color: '$text-1',
 });
 
 const AppRoot = styled(Column, {
   size: '100%',
-  overflow: 'hidden',
-  gap: '$xl',
-  bg: '$neutral-1',
+  gap: '$xxl',
   p: '$xl',
+  bg: '$neutral-2',
 });
 
 const Details = styled(Column, {
   gap: '$xl',
   flex: 2,
+  maxHeight: '100%',
+  overflow: 'auto',
 });
 
 const Content = styled('main', Row, {
   flex: 1,
-  gap: '$xl',
+  gap: '$2xl',
+  overflow: 'hidden',
 });
 
-export const CheckoutApp = () => {
+export const NomadInsuruerApp = () => {
   return (
     <Root className={checkoutApp}>
       <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap"
         rel="stylesheet"
       />
       <SketchAppPreview>

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Column, H3, styled, Row } from '@mpkelly/ui';
+import { Column, H3, styled, Row, Text, Paragraph } from '@mpkelly/ui';
 import { Bottom, Button, Panel, PrimaryText, Separator } from './ui/elements';
 
 const Root = styled(Column, Panel, {
   maxWidth: 280,
+  bg: '$neutral-1',
   [`${H3}`]: {
     lineHeight: 1,
   },
@@ -39,9 +40,15 @@ const Entry = styled(Row, {
   },
 });
 
+const Notice = styled(Paragraph, {
+  fontSize: '$sm',
+  color: '$text-2',
+  my: '$lg',
+});
+
 export const Summary = () => {
   return (
-    <Root>
+    <Root border>
       <H3>Order Summary</H3>
       <Entry>
         <Item>12 x Monthly insurance fee</Item>
@@ -78,6 +85,11 @@ export const Summary = () => {
       </Entry>
 
       <Bottom>
+        <Notice>
+          By confirming my order I acknowledge I have read the Terms and
+          Conditions and I'm fully aware of all my obligations.
+        </Notice>
+
         <Button>Confirm payment</Button>
       </Bottom>
     </Root>

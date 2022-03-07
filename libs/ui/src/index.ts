@@ -7,3 +7,5 @@ export * from './elements/Flex/Flex';
 export * from './elements/Icon/Icons';
 
 export * from './elements/Button/Button';
+
+export * from './elements/Switch/Switch';

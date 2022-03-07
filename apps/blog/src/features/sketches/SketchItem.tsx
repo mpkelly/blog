@@ -7,9 +7,9 @@ type Props = {
   preview: ReactNode;
 };
 
-const Root = styled(Row, { gap: '$lg' });
+const Root = styled(Row, { gap: '$xl' });
 const Preview = styled(Column, { flex: 1 });
-const Details = styled(Column, { flex: 1 });
+const Details = styled(Column, { flex: 1, gap: '$lg' });
 const Title = styled(H1);
 const Description = styled(Text, { color: 'text-2' });
 

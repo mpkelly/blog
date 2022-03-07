@@ -19,7 +19,7 @@ const Name = styled(H3);
 const BestPrice = styled(Label, { mr: 'auto' });
 
 const Price = styled(H3, {
-  color: '$primary-5',
+  color: '$accent-1',
 });
 const Description = styled(Paragraph, { color: '$text-2', fontSize: '$sm' });
 
@@ -41,7 +41,7 @@ const Terms = styled(Row, {
 
 export const Products = () => {
   return (
-    <Root>
+    <Root border>
       <Product>
         <ProductDetails>
           <Headline>

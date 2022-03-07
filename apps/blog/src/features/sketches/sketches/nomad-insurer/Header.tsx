@@ -5,11 +5,12 @@ import { Separator } from './ui/elements';
 
 const Root = styled('nav', Row, {
   justifyContent: 'space-between',
-  bg: '$neutral-2',
+  bg: '$neutral-5',
   py: '$md',
   px: '$lg',
   borderRadius: '$md',
   alignItems: 'center',
+  border: '1px solid $neutral-4',
 });
 
 const Brand = styled(Row, {

@@ -18,8 +18,8 @@ const DarkContent = styled(Column, {
 const Root = styled('section', Row, {
   width: '$content',
   alignItems: 'flex-start',
-  p: '$xxl $xl',
-  gap: '$xxl',
+  p: '$2xl $xl',
+  gap: '$2xl',
 });
 
 const Tile = styled(Column, {

@@ -1,28 +1,24 @@
 import React, { ReactNode } from 'react';
-import { Row, Column, Text, styled, Centered } from '@mpkelly/ui';
+import { Column, styled } from '@mpkelly/ui';
+import { BrowserWindow } from './frames/BrowserWindow';
 
 type Props = {
   children: ReactNode;
 };
 
-const Root = styled(Centered, {
+const Root = styled(Column, {
   borderRadius: '$md',
-  width: '80%',
-  height: '100%',
-});
-
-const Content = styled(Column, {
-  bg: 'white',
-  borderRadius: '$md',
-  size: '100%',
-  maxWidth: 1200,
+  height: 760,
+  width: 1300,
+  overflow: 'hidden',
+  alignItems: 'center',
 });
 
 export const SketchAppPreview = (props: Props) => {
   const { children } = props;
   return (
     <Root>
-      <Content>{children}</Content>
+      <BrowserWindow url={'www.nomadinsurer.com'}>{children}</BrowserWindow>
     </Root>
   );
 };

@@ -10,7 +10,7 @@ export const Text = styled('span', {
 
 export const Paragraph = styled(Text, {
   lineHeight: '$paragraph',
-  fontSize: '$lg',
+  fontSize: '$regular',
   defaultProps: {
     as: 'p',
   },
