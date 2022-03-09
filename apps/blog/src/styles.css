@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@media print {
+  @page {
+    size: auto;
+    margin: .8cm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  [data-print-root], [data-print-root] * {
+    visibility: visible;
+  }
+  [data-print-header] {
+    display:flex !important;
+    margin-top:16px;
+  }
+  [data-print-title] {
+    font-size:64px !important;
+  }
+
+  [data-badges] > * {
+    border: 2px solid black !important;
+  }
+
+  [data-print-root] {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  [data-print-only] {
+    display:block !important;
+  }
+
+  [data-nowrap] {
+    white-space: nowrap !important;
+  }
+
+
+  *:not(a):not(#skills) {
+    color:black !important;
+  }
+  p {
+    color: rgba(0,0,0,.7) !important;
+  }
+
+}

@@ -61,7 +61,7 @@ export const IntroSection = () => {
         don't even have a designer yet? I can be depended on to delivery
         fantastic user interfaces at speed.
         <RocketIcon />
-      </Paragraph>{' '}
+      </Paragraph>
     </Root>
   );
 };

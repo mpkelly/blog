@@ -21,7 +21,6 @@ export const Navigation = () => {
       <Right>
         <NavLink to={'/about'}>About</NavLink>
         <NavLink to={'/sketches'}>Sketches</NavLink>
-        <NavLink to={'/tools'}>Tools</NavLink>
         <NavLink to={'/resume'}>Resume</NavLink>
       </Right>
     </Nav>

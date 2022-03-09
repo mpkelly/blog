@@ -25,6 +25,7 @@ import {
   Link24Regular,
   Document24Regular,
   SignOut24Regular,
+  Games24Regular,
 } from '@fluentui/react-icons';
 import { styled } from '@mpkelly/ui';
 
@@ -54,6 +55,8 @@ export const ChatIcon = styled(Chat24Regular);
 export const CalendarIcon = styled(CalendarLtr24Regular);
 
 export const TasksIcon = styled(TaskListLtr24Regular);
+
+export const GamesIcon = styled(Games24Regular);
 
 export const AttachIcon = styled(Attach24Regular);
 

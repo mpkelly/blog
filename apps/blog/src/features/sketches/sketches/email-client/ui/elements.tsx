@@ -20,7 +20,7 @@ export const ProfilePic = styled(Centered, {
   variants: {
     large: {
       true: {
-        size: 48,
+        size: 42,
       },
     },
   },

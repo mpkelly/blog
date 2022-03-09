@@ -1,5 +1,5 @@
 import React from 'react';
-import { Column, ImageIcon, Paragraph, styled } from '@mpkelly/ui';
+import { Column, Paragraph, styled } from '@mpkelly/ui';
 import { PageTitle } from '../../components/PageTitle';
 import { SketchItem } from './SketchItem';
 import { NavLink as RRNavLink } from 'react-router-dom';
@@ -34,40 +34,41 @@ export const SketchesPage = () => {
         <Intro>
           <PageTitle title={'Sketches'} />
           <SubTitle>
-            Sketches are UI mockups that have been made using code instead of
-            tools like Sketch or Figma. The code is <u>very rough</u> and not
-            production-grade - the goal is simply to find layouts and styles
-            that work before re-implementing the UI in a real app. Each Sketch
-            has a set of primitive components for Icons, Text and Flexbox etc.
-            which are connected to a theme so I can make sweeping changes easily
-            and iterate quickly.
+            Sketches are UI mockups made with code. I find I can work quicker
+            using React with a themed component library than I can with tools
+            like Sketch of Figma. Below is a sample of my work.
+          </SubTitle>
+          <SubTitle>
+            Need a developer on your team who can create aesthetically appealing
+            UIs like this quickly? Let's talk.
           </SubTitle>
         </Intro>
 
         <NavLink to={'/sketches/email'}>
           <SketchItem
             title={'Email app inbox'}
-            description={lorem}
+            description={
+              <>
+                An email client inbox that uses a simple dark colour palette.
+                It's uses <code>Source Sans Pro</code> and <code>Lora</code>{' '}
+                fonts along with Microsoft's <code>Fluent</code> icon set.
+              </>
+            }
             preview={<PreviewImage src={'/assets/sketches/email.png'} />}
           />
         </NavLink>
 
-        <NavLink to={'/sketches/nomadinsurer'}>
+        <NavLink to={'/sketches/foodapp-signup'}>
           <SketchItem
-            title={'Insurance app checkout page'}
+            title={'Food app sign-up page'}
             description={
               <>
-                A simple checkout page for fictitious insurance company 'Nomad
-                Insurer' . It uses <code>Be Vietnam Pro</code> font and{' '}
-                <code>Feather</code> icon set. I don't really like it much but
-                want to include the good and bad UIs that I make so that clients
-                have a more accurate idea of my ability. It did only take me
-                several hours and could easily be reworked.{' '}
+                A simple sign-up page for a fictitious food delivery company. It
+                uses <code>Poppins</code> font. This is an example of what I can
+                do in an hour.
               </>
             }
-            preview={
-              <PreviewImage src={'/assets/sketches/nomad_insurer.png'} />
-            }
+            preview={<PreviewImage src={'/assets/sketches/eatstreet.png'} />}
           />
         </NavLink>
       </Content>

@@ -7,6 +7,7 @@ import {
   ChatIcon,
   DraftsIcon,
   EmailIcon,
+  GamesIcon,
   InboxIcon,
   SendIcon,
   SignOutIcon,
@@ -42,8 +43,8 @@ const Group = styled(Column, {
 });
 
 const Badge = styled(Text, Centered, {
-  fontSize: '$xs',
-  size: 20,
+  fontSize: '$sm',
+  size: 24,
   bg: '$neutral-1',
   borderRadius: '$round',
 });
@@ -131,8 +132,8 @@ export const Folders = (props: Props) => {
           <Text>Tasks</Text>
         </GroupItem>
         <GroupItem>
-          <ChatIcon />
-          <Text>Chat</Text>
+          <GamesIcon />
+          <Text>Games</Text>
         </GroupItem>
       </Group>
 

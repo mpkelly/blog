@@ -52,6 +52,7 @@ const ReplyBox = styled(Column, {
   height: 300,
   width: '100%',
   overflow: 'hidden',
+  mt: 'auto',
 });
 
 const ReplyToolbar = styled(Row, {
@@ -98,13 +99,20 @@ export const EmailDetail = (props: Props) => {
     <Root>
       <Header>
         <HeaderSender>
-          <ProfilePic large {...getPicProps('Bertrand Russell')} />
+          <ProfilePic
+            large
+            {...getPicProps(
+              '',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJF35ahcXljNF2i6oMCV02bHH1tjt0SG_bhziv2tqOxTJqY1A51Co3Osa_Gg12IwvsqU&usqp=CAU'
+            )}
+            style={{ backgroundSize: 50 }}
+          />
           <HeaderIdentifier>
             <HeaderName>Bertrand Russell</HeaderName>
             <HeaderEmail>brussell@philosophy.com</HeaderEmail>
           </HeaderIdentifier>
         </HeaderSender>
-        <HeaderTime>12:40pm Janurary 1954</HeaderTime>
+        <HeaderTime>12:40pm 12th April 1945</HeaderTime>
       </Header>
       <Separator />
       <Subject>The essence of liberalism</Subject>
@@ -143,7 +151,7 @@ export const EmailDetail = (props: Props) => {
         </ReplyToolbar>
         <ReplyContent>
           <BodyText>Dear Bertie,</BodyText>
-          <BodyText>I trust this reply finds you well...</BodyText>
+          <BodyText>Sorry the slow reply.</BodyText>
 
           <BodyText>
             This sounds great but do you have any practical advice for dealing

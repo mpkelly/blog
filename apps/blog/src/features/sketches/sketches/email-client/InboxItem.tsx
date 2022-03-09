@@ -1,5 +1,5 @@
-import React from 'react';
-import { Row, Column, Text, styled, Centered } from '@mpkelly/ui';
+import React, { CSSProperties } from 'react';
+import { Column, Row, styled, Text } from '@mpkelly/ui';
 import { AttachIcon } from './ui/Icons';
 import { getPicProps, ProfilePic } from './ui/elements';
 
@@ -11,6 +11,7 @@ type Props = {
   attachments?: boolean;
   profileUrl?: string;
   selected?: boolean;
+  profilesProps?: CSSProperties;
 };
 
 const Root = styled(Row, {
@@ -36,19 +37,32 @@ const Subject = styled(Text, {
   whiteSpace: 'nowrap',
   textOverflow: 'ellipsis',
 });
-const Preview = styled(Text, {
-  color: '$text-2',
+
+const clampedText = {
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   textOverflow: 'ellipsis',
+};
+
+const Preview = styled(Text, {
+  color: '$text-2',
+  ...clampedText,
 });
-const Sender = styled(Text, { color: '$text-1' });
+const Sender = styled(Text, {
+  color: '$text-1',
+  ...clampedText,
+});
 const Details = styled(Column, {
   gap: '$sm',
   width: '100%',
   overflow: 'hidden',
 });
-const Time = styled(Text, { color: '$text-2', fontSize: '$sm' });
+const Time = styled(Text, {
+  color: '$text-2',
+  fontSize: '$sm',
+  whiteSpace: 'nowrap',
+  ml: '$md',
+});
 const Header = styled(Row, {
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -59,15 +73,23 @@ const Attachments = styled(AttachIcon, {
   bottom: 10,
   left: 16,
   size: 14,
-  color: '$accent-1',
+  color: '$text-1',
 });
 
 export const InboxItem = (props: Props) => {
-  const { subject, preview, sender, time, attachments, profileUrl, selected } =
-    props;
+  const {
+    subject,
+    preview,
+    sender,
+    time,
+    attachments,
+    profileUrl,
+    profilesProps = { backgroundSize: 40 },
+    selected,
+  } = props;
   return (
     <Root selected={selected}>
-      <ProfilePic {...getPicProps(sender, profileUrl)} />
+      <ProfilePic {...getPicProps(sender, profileUrl)} style={profilesProps} />
       <Details>
         <Header>
           <Sender>{sender}</Sender>

@@ -6,6 +6,12 @@ import {
   Wrench,
   Code,
   Image,
+  Printer,
+  Calendar,
+  Buildings,
+  MapPin,
+  Envelope,
+  GithubLogo,
 } from 'phosphor-react';
 
 import { createIcon } from './Icon';
@@ -23,3 +29,15 @@ export const ToolIcon = createIcon(Wrench);
 export const CodeIcon = createIcon(Code);
 
 export const ImageIcon = createIcon(Image);
+
+export const PrintIcon = createIcon(Printer);
+
+export const DateIcon = createIcon(Calendar);
+
+export const CompanyIcon = createIcon(Buildings);
+
+export const LocationIcon = createIcon(MapPin);
+
+export const MailIcon = createIcon(Envelope);
+
+export const GitHubIcon = createIcon(GithubLogo);
