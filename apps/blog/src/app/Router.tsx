@@ -5,8 +5,8 @@ import { AboutPage } from '../features/about/AboutPage';
 import { Navigation } from './Navigation';
 import { SketchesPage } from '../features/sketches/SketchesPage';
 import { EmailApp } from '../features/sketches/sketches/email-client/EmailApp';
-import { FoodApp } from '../features/sketches/sketches/foodapp-signup/ui/FoodApp';
 import { ResumePage } from '../features/resume/ResumePage';
+import { FoodApp } from '../features/sketches/sketches/foodapp-signup/FoodApp';
 
 export const Router = () => {
   return (

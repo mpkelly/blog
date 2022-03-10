@@ -4,7 +4,6 @@ import { ServiceNotOffered, ServiceOffered } from './ServiceOffered';
 
 const Root = styled('section', Column, {
   width: '100%',
-  minHeight: 1000,
   alignItems: 'center',
   p: '$xl',
   gap: '$xxl',

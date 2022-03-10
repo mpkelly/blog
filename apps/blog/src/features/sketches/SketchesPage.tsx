@@ -1,7 +1,6 @@
 import React from 'react';
 import { Column, Paragraph, styled } from '@mpkelly/ui';
 import { PageTitle } from '../../components/PageTitle';
-import { SketchItem } from './SketchItem';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import { PreviewImage } from './PreviewImage';
 
@@ -21,6 +20,13 @@ const Intro = styled(Column, {
 });
 
 const SubTitle = styled(Paragraph, {});
+
+const SketchesGrid = styled('div', {
+  width: '100%',
+  display: 'grid',
+  gridGap: '$lg',
+  gridTemplateColumns: '50% auto',
+});
 
 export const NavLink = styled(RRNavLink, {
   color: 'inherit',
@@ -44,33 +50,15 @@ export const SketchesPage = () => {
           </SubTitle>
         </Intro>
 
-        <NavLink to={'/sketches/email'}>
-          <SketchItem
-            title={'Email app inbox'}
-            description={
-              <>
-                An email client inbox that uses a simple dark colour palette.
-                It's uses <code>Source Sans Pro</code> and <code>Lora</code>{' '}
-                fonts along with Microsoft's <code>Fluent</code> icon set.
-              </>
-            }
-            preview={<PreviewImage src={'/assets/sketches/email.png'} />}
-          />
-        </NavLink>
+        <SketchesGrid>
+          <NavLink to={'/sketches/email'}>
+            <PreviewImage src={'/assets/sketches/email.png'} />
+          </NavLink>
 
-        <NavLink to={'/sketches/foodapp-signup'}>
-          <SketchItem
-            title={'Food app sign-up page'}
-            description={
-              <>
-                A simple sign-up page for a fictitious food delivery company. It
-                uses <code>Poppins</code> font. This is an example of what I can
-                do in an hour.
-              </>
-            }
-            preview={<PreviewImage src={'/assets/sketches/eatstreet.png'} />}
-          />
-        </NavLink>
+          <NavLink to={'/sketches/foodapp-signup'}>
+            <PreviewImage src={'/assets/sketches/eatstreet.png'} />
+          </NavLink>
+        </SketchesGrid>
       </Content>
     </Root>
   );

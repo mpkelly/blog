@@ -6,16 +6,16 @@ import {
   ToolIcon,
   CodeIcon,
   RocketIcon,
+  darkTheme,
 } from '@mpkelly/ui';
 
-const DarkContent = styled(Column, {
-  alignItems: 'center',
-  bg: '$neutral-1',
-  color: 'white',
+const Root = styled('section', Row, {
+  bg: '$bg-1',
   width: '100%',
+  justifyContent: 'center',
 });
 
-const Root = styled('section', Row, {
+const Content = styled('section', Row, {
   width: '$content',
   alignItems: 'flex-start',
   p: '$2xl $xl',
@@ -24,7 +24,7 @@ const Root = styled('section', Row, {
 
 const Tile = styled(Column, {
   p: '$xl',
-  bg: '$neutral-2',
+  bg: '$bg-2',
   flex: 1,
   gap: '$xl',
   height: 200,
@@ -34,13 +34,13 @@ const Tile = styled(Column, {
   },
   svg: {
     size: 60,
-    color: '$primary-5',
+    color: '$primary-1',
   },
 });
 
 export const TilesSection = () => (
-  <DarkContent>
-    <Root>
+  <Root className={darkTheme}>
+    <Content>
       <Tile>
         <ToolIcon />
         <Text>Up-to-date tech & tool stack</Text>
@@ -53,6 +53,6 @@ export const TilesSection = () => (
         <RocketIcon />
         <Text>All done at startup speed</Text>
       </Tile>
-    </Root>
-  </DarkContent>
+    </Content>
+  </Root>
 );

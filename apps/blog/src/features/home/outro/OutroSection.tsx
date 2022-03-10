@@ -1,13 +1,13 @@
-import { Column, styled } from '@mpkelly/ui';
+import { Column, darkTheme, styled } from '@mpkelly/ui';
 
 const Root = styled('section', Column, {
-  bg: '$primary-5',
-  height: 1000,
-  minHeight: 1000,
-  flexShrink: 0,
+  bg: '$bg-1',
+  height: 500,
+  minHeight: 500,
+  width: '100%',
   p: '$xl',
 });
 
 export const OutroSection = () => {
-  return <Root>Test</Root>;
+  return <Root className={darkTheme}>Test</Root>;
 };

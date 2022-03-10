@@ -1,9 +1,5 @@
 import React from 'react';
-import { Row, Column, Text, styled } from '@mpkelly/ui';
-import { CNNLogo } from './CNNLogo';
-import { BloombergLogo } from './BloombergLogo';
-
-type Props = {};
+import { Column, styled, Text } from '@mpkelly/ui';
 
 const Root = styled(Column, {
   background: `url("assets/food.jpg")`,

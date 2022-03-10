@@ -1,4 +1,4 @@
-import { colors } from './colors';
+import { mainPalette } from './colors';
 import { fonts } from './fonts';
 import { fontSizes } from './fontSizes';
 import { fontWeights } from './fontWeights';
@@ -7,8 +7,8 @@ import { radii } from './radii';
 import { sizes } from './sizes';
 import { space } from './space';
 
-export const baseTheme = {
-  colors,
+export const mainTheme = {
+  colors: mainPalette,
   fonts,
   fontSizes,
   fontWeights,

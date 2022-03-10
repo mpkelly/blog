@@ -1,7 +1,6 @@
 import React from 'react';
-import { Row, Column, Text, styled, Centered } from '@mpkelly/ui';
-import { GoogleLogo } from './GoogleLogo';
-import { Input } from '../../nomad-insurer/ui/elements';
+import { Row, Column, Text, styled, Centered, Input } from '@mpkelly/ui';
+import { GoogleLogo } from './ui/GoogleLogo';
 
 type Props = {};
 
@@ -46,7 +45,8 @@ const Description = styled(Text, {
 
 const FormInput = styled(Input, {
   height: 40,
-  outline: 'none',
+  p: '$lg',
+  borderRadius: '$md',
   border: '1px solid transparent',
   boxShadow: 'inset 0 2px 2px 2px rgba(0,0,0,.1)',
   bg: '$back-3',

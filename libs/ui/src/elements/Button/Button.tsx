@@ -1,7 +1,7 @@
 import { styled } from '@mpkelly/ui';
 
 export const Button = styled('button', {
-  bg: '$primary-5',
+  bg: '$primary-1',
   fontSize: '$regular',
   fontFamily: '$headings',
   border: 'none',
@@ -9,9 +9,9 @@ export const Button = styled('button', {
   p: '$md $lg',
   cursor: 'pointer',
   '&:hover': {
-    bg: '$primary-3',
+    filter: 'brightness(80%)',
   },
   '&:active': {
-    bg: '$primary-7',
+    filter: 'brightness(50%)',
   },
 });

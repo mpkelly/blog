@@ -8,16 +8,16 @@ export const Switch = styled(RSwitch.Root, {
   width: 36,
   flexShrink: 0,
   border: 'none',
-  bg: '$neutral-1',
+  bg: '$back-1',
   boxShadow: `inset 0 2px 4px $neutral-2`,
   '&[data-state="unchecked"]': {
-    bg: '$neutral-3',
+    bg: '$back-3',
   },
   variants: {
     context: {
       primary: {
         '&[data-state="checked"]': {
-          bg: '$primary-5',
+          bg: '$primary-1',
         },
       },
     },
@@ -28,7 +28,7 @@ export const Thumb = styled(RSwitch.Thumb, {
   display: 'block',
   borderRadius: '$round',
   size: 16,
-  bg: '$neutral-2',
+  bg: '$back-2',
   '&[data-state="checked"]': {
     transform: 'translateX(16px)',
   },

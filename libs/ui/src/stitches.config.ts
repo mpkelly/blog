@@ -1,10 +1,10 @@
 import type Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
-import { baseTheme } from './theme';
+import { mainTheme } from './theme/mainTheme';
 
 const config = createStitches({
   theme: {
-    ...baseTheme,
+    ...mainTheme,
   },
   media: {
     xs: '(min-width: 384px)',
@@ -98,7 +98,7 @@ export const globalStyles = globalCss({
     fontSize: '$regular',
     lineHeight: '$none',
     color: '$text-1',
-    bg: '$primary-5',
+    bg: '$primary-1',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     WebkitTapHighlightColor: 'transparent',

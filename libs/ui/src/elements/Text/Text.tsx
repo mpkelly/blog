@@ -25,7 +25,7 @@ const heading = {
 };
 
 export const H1 = styled('h1', heading, {
-  fontSize: '$xxl',
+  fontSize: '$2xl',
 });
 
 export const H2 = styled('h2', heading, {
@@ -53,7 +53,8 @@ export const Link = styled('a', {
     inline: {
       true: {
         fontFamily: '$main',
-        color: '$primary-5',
+        color: '$text-1',
+        borderColor: '$accent-1',
         fontSize: 'inherit',
       },
     },

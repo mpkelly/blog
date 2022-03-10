@@ -27,10 +27,10 @@ const Details = styled(Column, {
 const IconBox = styled(Centered, {
   borderRadius: '$md',
   size: 50,
-  bg: '$primary-5',
+  bg: '$text-1',
   flexShrink: 0,
   svg: {
-    color: '$text-1',
+    color: '$primary-1',
   },
 });
 
@@ -40,8 +40,8 @@ const Checkmark = styled(CheckIcon, {
   },
 });
 
-const ServiceName = styled(Text, { fontSize: '$xl', color: 'white' });
-const Description = styled(Text, { color: '$text-4' });
+const ServiceName = styled(Text, { fontSize: '$xl', color: '$text-1' });
+const Description = styled(Text, { color: '$text-2' });
 
 const Service = (props: Props & { name: ReactNode }) => {
   const { children, description, name } = props;

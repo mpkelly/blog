@@ -1,9 +1,10 @@
 import { Column, globalStyles, styled } from '@mpkelly/ui';
 import { Router } from './Router';
+import { OutroSection } from '../features/home/outro/OutroSection';
 
 const Root = styled(Column, {
   alignItems: 'center',
-  height: '100%',
+  minHeight: '100%',
 });
 
 export function App() {
@@ -11,6 +12,7 @@ export function App() {
   return (
     <Root>
       <Router />
+      <OutroSection />
     </Root>
   );
 }

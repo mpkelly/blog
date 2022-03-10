@@ -1,10 +1,19 @@
 import React from 'react';
-import { Row, Column, Text, styled, H3, H2, Paragraph } from '@mpkelly/ui';
+import {
+  Row,
+  Column,
+  Text,
+  styled,
+  H3,
+  H2,
+  Paragraph,
+  blueTheme,
+} from '@mpkelly/ui';
 
 const Root = styled('aside', Column, {
   gap: '$2xl',
-  bg: '$accent-1',
-  color: 'white',
+  bg: '$bg-1',
+  color: '$text-1',
   p: '$lg',
 });
 
@@ -21,11 +30,12 @@ const Skill = styled(Text, {
   fontSize: '$sm',
   lineHeight: 'none',
   border: '2px solid white',
+  fontWeight: '$bold',
 });
 
 export const SkillsSummary = () => {
   return (
-    <Root>
+    <Root className={blueTheme}>
       <Summary>
         <SummaryTitle>Summary</SummaryTitle>
         <SummaryText>
