@@ -61,6 +61,10 @@
     display: none;
   }
 
+  [data-employment-location]{
+    display:none !important;
+  }
+
   #about {
     flex-direction: column;
   }

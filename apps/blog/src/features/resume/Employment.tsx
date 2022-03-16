@@ -28,6 +28,8 @@ const Details = styled(Row, {
   whiteSpace: 'nowrap',
 });
 
+const Location = styled(Row, { alignItems: 'center' });
+
 export const Employment = (props: Props) => {
   const { title, startDate, endDate, description, company, location } = props;
   return (
@@ -40,8 +42,10 @@ export const Employment = (props: Props) => {
         </Text>
         <CompanyIcon />
         <Text data-value>{company}</Text>
-        <LocationIcon />
-        <Text data-value>{location}</Text>
+        <Location data-employment-location>
+          <LocationIcon />
+          <Text data-value>{location}</Text>
+        </Location>
       </Details>
       <Paragraph>{description}</Paragraph>
     </Root>
