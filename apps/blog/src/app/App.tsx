@@ -1,6 +1,5 @@
 import { Column, globalStyles, styled } from '@mpkelly/ui';
 import { Router } from './Router';
-import { OutroSection } from '../features/home/outro/OutroSection';
 
 const Root = styled(Column, {
   alignItems: 'center',
@@ -12,7 +11,6 @@ export function App() {
   return (
     <Root>
       <Router />
-      <OutroSection />
     </Root>
   );
 }

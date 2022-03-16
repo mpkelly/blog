@@ -12,6 +12,7 @@ const config = createStitches({
     md: '(min-width: 768px)',
     lg: '(min-width: 1020px)',
     xl: '(min-width: 1280px)',
+    "2xl": '(min-width: 1600px)',
   },
   utils: {
     bg: (value: Stitches.PropertyValue<'background'>) => ({
@@ -106,5 +107,5 @@ export const globalStyles = globalCss({
     '*': {
       boxSizing: 'border-box',
     },
-  },
+  }
 });

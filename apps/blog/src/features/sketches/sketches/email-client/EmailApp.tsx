@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Column, Text, styled } from '@mpkelly/ui';
-import { BrowserWindow } from '../../frames/BrowserWindow';
+import { Row, styled } from '@mpkelly/ui';
 import { Folders } from './Folders';
 import { emailAppTheme } from './ui/theme/theme';
 import { Inbox } from './Inbox';

@@ -41,7 +41,8 @@
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "blog:build",
-        "hmr": true
+        "hmr": true,
+        "port": 9998
       },
       "configurations": {
         "production": {

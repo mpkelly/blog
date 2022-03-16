@@ -10,6 +10,20 @@ const Root = styled('section', Column, {
   p: '$xl',
 });
 
+const Intro = styled(H1, {
+  fontSize: 50,
+  maxWidth: '50%',
+  span: {
+    textDecoration: 'underline',
+    textDecorationColor: '$accent-1',
+  },
+});
+
+const Header = styled(Row, {
+  gap: '$xl',
+  alignItems: 'center',
+});
+
 const TechStack = styled(Row, {
   justifyContent: 'center',
   gap: '$xl',
@@ -29,20 +43,11 @@ const TechStack = styled(Row, {
 export const IntroSection = () => {
   return (
     <Root>
-      <Row css={{ gap: '$xl', alignItems: 'center' }}>
-        <H1
-          css={{
-            fontSize: 50,
-            maxWidth: '50%',
-            span: {
-              textDecoration: 'underline',
-              textDecorationColor: '$accent-1',
-            },
-          }}
-        >
+      <Header>
+        <Intro>
           Hey, I'm Mike. A <span>creative frontend developer</span> who can turn
           rough sketches or wireframes into <span>beautiful UIs</span>.
-        </H1>
+        </Intro>
         <Row
           css={{
             flex: 1,
@@ -50,7 +55,7 @@ export const IntroSection = () => {
         >
           <Mockup />
         </Row>
-      </Row>
+      </Header>
       <TechStack>
         <ReactLogo />
         <TypeScriptLogo />
@@ -58,8 +63,8 @@ export const IntroSection = () => {
       </TechStack>
       <Paragraph>
         Are you a startup trying to shorten your design process? Or maybe you
-        don't even have a designer yet? I can be depended on to delivery
-        fantastic user interfaces at speed.
+        don't even have a designer yet? I can be depended on to delivery visual
+        appealing user interfaces at speed.
         <RocketIcon />
       </Paragraph>
     </Root>

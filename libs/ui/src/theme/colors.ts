@@ -19,7 +19,7 @@ export const darkPalette = {
   ...mainPalette,
 
   'text-1': `hsl(0, 0%, 90%)`,
-  'text-2': `hsl(0, 20%, 80%)`,
+  'text-2': `hsl(0, 00%, 70%)`,
 
   'bg-1': 'hsla(231, 3%, 1%, 1)',
   'bg-2': 'hsla(231, 3%, 8%, 1)',

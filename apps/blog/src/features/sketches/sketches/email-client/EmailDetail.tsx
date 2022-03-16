@@ -17,8 +17,6 @@ import {
   StrikethroughIcon,
 } from './ui/Icons';
 
-type Props = {};
-
 const Root = styled(Column, {
   flex: 1,
   p: '$xl',
@@ -94,7 +92,7 @@ const ToolbarSeparator = styled(Column, {
   borderRight: '1px solid $neutral-3',
 });
 
-export const EmailDetail = (props: Props) => {
+export const EmailDetail = () => {
   return (
     <Root>
       <Header>

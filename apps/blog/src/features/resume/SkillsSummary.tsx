@@ -56,7 +56,7 @@ export const SkillsSummary = () => {
           <Skill>React Native</Skill>
           <Skill>HTML</Skill>
           <Skill>CSS</Skill>
-          <Skill>Lerner</Skill>
+          <Skill>Lerna</Skill>
           <Skill>nx</Skill>
           <Skill>Cypress</Skill>
           <Skill>WebStorm</Skill>

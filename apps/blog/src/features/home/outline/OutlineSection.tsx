@@ -1,14 +1,24 @@
 import React from 'react';
-import { Column, H1, Paragraph, Row, Text, styled, Link } from '@mpkelly/ui';
+import {
+  Column,
+  H1,
+  Paragraph,
+  Row,
+  Text,
+  styled,
+  Link,
+  darkTheme,
+} from '@mpkelly/ui';
 import { ServiceNotOffered, ServiceOffered } from './ServiceOffered';
 
 const Root = styled('section', Column, {
   width: '100%',
+  minHeight: '100vh',
   alignItems: 'center',
   p: '$xl',
   gap: '$xxl',
-  bg: '$neutral-2',
-  color: '$primary-5',
+  bg: '$bg-2',
+  color: '$text-1',
 });
 
 const Content = styled(Column, {
@@ -21,7 +31,7 @@ const Intro = styled(Column);
 const Title = styled(H1);
 
 const SubTitle = styled(Paragraph, {
-  color: '$text-4',
+  color: '$text-2',
 });
 
 const Services = styled(Row, {
@@ -32,23 +42,16 @@ const Services = styled(Row, {
   mt: '$xl',
 });
 
-const FinalWord = styled(Text, {
-  color: '$text-3',
-  fontSize: '$lg',
-  alignSelf: 'flex-start',
-  mt: '$xl',
-});
-
 export const OutlineSection = () => {
   return (
-    <Root>
+    <Root className={darkTheme}>
       <Content>
         <Intro>
           <Title>What services do I offer?</Title>
           <SubTitle>
-            First and foremost I am a frontend developer who can add value from
-            day one. However, I also have a more creative streak and really love
-            to have some freedom when it comes to the UI styling.{' '}
+            I am primarily a frontend developer but I am also an excellent fit
+            for teams or projects that don't have a dedicated designer. I can
+            produce visually appealing user interfaces without design input.
           </SubTitle>
         </Intro>
 
@@ -98,14 +101,6 @@ export const OutlineSection = () => {
             Custom illustrations
           </ServiceNotOffered>
         </Services>
-
-        <FinalWord>
-          Still not convinced? Read some of{' '}
-          <Link href={'#'} inline>
-            my short thoughts
-          </Link>{' '}
-          on various aspects of frontend development
-        </FinalWord>
       </Content>
     </Root>
   );

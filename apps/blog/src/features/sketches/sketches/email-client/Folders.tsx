@@ -6,7 +6,6 @@ import {
   CalendarIcon,
   ChatIcon,
   DraftsIcon,
-  EmailIcon,
   GamesIcon,
   InboxIcon,
   SendIcon,

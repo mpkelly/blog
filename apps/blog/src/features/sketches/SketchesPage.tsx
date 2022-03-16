@@ -10,9 +10,10 @@ const Root = styled(Column, {
 });
 
 const Content = styled('section', Column, {
-  width: '$content',
+  width:"$content",
   p: '$xl',
   gap: '$2xl',
+  minHeight:"100vh"
 });
 
 const Intro = styled(Column, {
@@ -52,11 +53,11 @@ export const SketchesPage = () => {
 
         <SketchesGrid>
           <NavLink to={'/sketches/email'}>
-            <PreviewImage src={'/assets/sketches/email.png'} />
+            <PreviewImage src={'./assets/sketches/email.png'} />
           </NavLink>
 
           <NavLink to={'/sketches/foodapp-signup'}>
-            <PreviewImage src={'/assets/sketches/eatstreet.png'} />
+            <PreviewImage src={'./assets/sketches/eatstreet.png'} />
           </NavLink>
         </SketchesGrid>
       </Content>

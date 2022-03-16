@@ -10,11 +10,20 @@ export const Text = styled('span', {
 
 export const Paragraph = styled(Text, {
   lineHeight: '$paragraph',
-  fontSize: '$regular',
   m: 0,
   defaultProps: {
     as: 'p',
   },
+  variants: {
+    size: {
+      regular: {
+        fontSize: '$regular',
+      },
+      "2xl": {
+        fontSize: '$xl',
+      }
+    }
+  }
 });
 
 const heading = {

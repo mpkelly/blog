@@ -41,7 +41,7 @@ export const IntroSection = () => {
           </Paragraph>
         </Details>
         <Image>
-          <img src={'/assets/me.jpg'} />
+          <img src={'./assets/me.jpg'} />
         </Image>
       </Content>
     </Root>

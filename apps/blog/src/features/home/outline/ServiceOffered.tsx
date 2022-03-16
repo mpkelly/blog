@@ -27,10 +27,10 @@ const Details = styled(Column, {
 const IconBox = styled(Centered, {
   borderRadius: '$md',
   size: 50,
-  bg: '$text-1',
+  bg: '$primary-1',
   flexShrink: 0,
   svg: {
-    color: '$primary-1',
+    color: '$bg-1',
   },
 });
 

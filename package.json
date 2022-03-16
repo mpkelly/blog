@@ -2,12 +2,13 @@
   "name": "mpkelly",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": ".",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
+    "build": "nx build --baseHref ./",
     "test": "nx test",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist/apps/blog/assets"
+    "deploy": "gh-pages -d dist/apps/blog"
   },
   "private": true,
   "devDependencies": {
