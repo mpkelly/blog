@@ -11,7 +11,7 @@ const PrintSpacer = styled('div', {
 
 export const EmploymentHistory = () => {
   return (
-    <Root>
+    <Root id={'employment'}>
       <H2>Employment History</H2>
       <Employment
         title={

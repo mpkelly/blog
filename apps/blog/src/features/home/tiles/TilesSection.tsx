@@ -40,7 +40,7 @@ const Tile = styled(Column, {
 
 export const TilesSection = () => (
   <Root className={darkTheme}>
-    <Content>
+    <Content id={'tiles'}>
       <Tile>
         <ToolIcon />
         <Text>Up-to-date tech & tool stack</Text>

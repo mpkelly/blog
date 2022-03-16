@@ -46,7 +46,7 @@ export const OutlineSection = () => {
           </SubTitle>
         </Intro>
 
-        <Services>
+        <Services id={'services'}>
           <ServiceOffered
             description={
               "Code that's easy to read and reason about; code that's well-tested. "

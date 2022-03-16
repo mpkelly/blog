@@ -51,7 +51,7 @@ export const ResumePage = () => {
           <PrintIcon />
         </PrintButton>
       </Header>
-      <Content data-print-root>
+      <Content data-print-root id={'resume'}>
         <PrintHeader />
         <Body>
           <EmploymentHistory />

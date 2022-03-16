@@ -1,3 +1,80 @@
+
+@media  (max-width: 650px) {
+  :root {
+    --sizes-content: 100% !important;
+    --fontSizes-xxs: 11px !important;
+    --fontSizes-xs: 13px !important;
+    --fontSizes-sm: 16px !important;
+    --fontSizes-regular: 18px !important;
+    --fontSizes-lg: 26px !important;
+    --fontSizes-xl: 30px !important;
+    --fontSizes-2xl: 32px !important;
+    --fontSizes-3xl: 50px !important;
+
+    --sizes-md: 4px !important;
+    --sizes-lg: 8px !important;
+    --sizes-xl: 16px !important;
+    --sizes-2xl: 32px !important;
+  }
+
+  #sketches-link {
+    display:none;
+  }
+
+  #mockup {
+    display:none;
+  }
+
+  #tiles > div {
+    width: 100%;
+  }
+
+  #tiles > div > span {
+    font-size: var(--fontSizes-lg) !important;
+  }
+
+  #footer,
+  #tiles {
+    flex-direction: column;
+  }
+  #tiles > div > text {
+    font-size: var(--fontSizes-lg) !important;
+  }
+
+  [data-employment-details]{
+    white-space: unset !important;
+  }
+
+  #services {
+    flex-direction: column;
+  }
+
+  #services > div {
+    width:100%;
+  }
+
+  #resume {
+    max-width: 100%;
+  }
+
+  #resume aside {
+    display: none;
+  }
+
+  #about {
+    flex-direction: column;
+  }
+  #about > div {
+    flex:1;
+    max-width:unset;
+  }
+
+  #about img {
+    width: 100%;
+  }
+}
+
+
 @media  (min-width: 1600px) {
   /**
      It would be better if stitches supported responsive tokens

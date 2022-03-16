@@ -22,7 +22,7 @@ export const IntroSection = () => {
   return (
     <Root>
       <PageTitle title={'About '} />
-      <Content>
+      <Content id={'about'}>
         <Details>
           <Paragraph>
             Hi, I'm <strong>Mike</strong>.

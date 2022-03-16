@@ -33,7 +33,7 @@ export const Employment = (props: Props) => {
   return (
     <Root>
       <H3>{title}</H3>
-      <Details>
+      <Details data-employment-details>
         <DateIcon />
         <Text data-value>
           {startDate} - {endDate}

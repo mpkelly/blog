@@ -7,14 +7,13 @@ import {
   styled,
   GitHubIcon,
   DribbbleIcon,
-  CodeIcon,
   MailIcon,
 } from '@mpkelly/ui';
 
 const Root = styled('section', Column, {
   bg: '$bg-1',
   width: '100%',
-  height: 300,
+  minHeight: 300,
   p: '$xl',
   alignItems: 'center',
   color: '$text-1',
@@ -26,6 +25,7 @@ const Content = styled(Row, {
   width: '$content',
   justifyContent: 'space-between',
   pb: '$lg',
+  gap: '$xl',
 });
 
 const ContactLinks = styled(Column, { gap: '$lg' });
@@ -45,7 +45,7 @@ const Article = styled('a', Text, { color: '$text-2' });
 export const FooterSection = () => {
   return (
     <Root className={darkTheme}>
-      <Content>
+      <Content id={'footer'}>
         <ContactLinks>
           <Title>Contact info</Title>
           <Contact target={'_blank'} href={'https://github.com/mpkelly'}>

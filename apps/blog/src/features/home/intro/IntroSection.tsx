@@ -12,7 +12,6 @@ const Root = styled('section', Column, {
 
 const Intro = styled(H1, {
   fontSize: '$2xl',
-  maxWidth: '50%',
   span: {
     textDecoration: 'underline',
     textDecorationColor: '$accent-1',
@@ -40,6 +39,8 @@ const TechStack = styled(Row, {
   },
 });
 
+const MockupRoot = styled(Row, { flex: 1 });
+
 export const IntroSection = () => {
   return (
     <Root>
@@ -48,13 +49,9 @@ export const IntroSection = () => {
           Hey, I'm Mike. A <span>creative frontend developer</span> who can turn
           rough sketches or wireframes into <span>beautiful UIs</span>.
         </Intro>
-        <Row
-          css={{
-            flex: 1,
-          }}
-        >
+        <MockupRoot id={'mockup'}>
           <Mockup />
-        </Row>
+        </MockupRoot>
       </Header>
       <TechStack>
         <ReactLogo />
