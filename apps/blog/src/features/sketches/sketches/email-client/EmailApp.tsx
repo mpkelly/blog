@@ -8,6 +8,7 @@ import { EmailDetail } from './EmailDetail';
 const Root = styled(Row, {
   flex: 1,
   minHeight: 1000,
+  p: '$2xl',
   overflow: 'hidden',
   //global styles
   fontFamily: '$main',

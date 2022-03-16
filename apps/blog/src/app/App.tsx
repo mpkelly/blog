@@ -7,6 +7,7 @@ const Root = styled(Column, {
 });
 
 export function App() {
+  //see also styles.css for @media and @print rules
   globalStyles();
   return (
     <Root>

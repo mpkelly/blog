@@ -17,7 +17,7 @@ type Props = {
 const Root = styled(Row, {
   alignItems: 'flex-start',
   gap: '$xl',
-  width: 480,
+  width: 'calc(50% -  $xl)',
 });
 
 const Details = styled(Column, {

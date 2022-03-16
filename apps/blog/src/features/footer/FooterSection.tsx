@@ -32,9 +32,9 @@ const ContactLinks = styled(Column, { gap: '$lg' });
 
 const Contact = styled('a', Row, {
   gap: '$md',
-  color: '$text-2',
   alignItems: 'center',
   textDecoration: 'none',
+  color: '$text-2',
 });
 const ContactName = styled(Text);
 

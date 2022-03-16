@@ -7,6 +7,7 @@ import { SplashPanel } from './SplashPanel';
 const Root = styled(Column, {
   height: '100vh',
   width: '100vw',
+  p: '$2xl',
   alignItems: 'center',
   overflow: 'hidden',
   //global

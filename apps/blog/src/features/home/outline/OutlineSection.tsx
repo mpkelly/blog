@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Column,
-  H1,
-  Paragraph,
-  Row,
-  Text,
-  styled,
-  Link,
-  darkTheme,
-} from '@mpkelly/ui';
+import { Column, darkTheme, H1, Paragraph, Row, styled } from '@mpkelly/ui';
 import { ServiceNotOffered, ServiceOffered } from './ServiceOffered';
 
 const Root = styled('section', Column, {

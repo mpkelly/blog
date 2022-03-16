@@ -11,7 +11,7 @@ const Root = styled('section', Column, {
 });
 
 const Intro = styled(H1, {
-  fontSize: 50,
+  fontSize: '$2xl',
   maxWidth: '50%',
   span: {
     textDecoration: 'underline',
