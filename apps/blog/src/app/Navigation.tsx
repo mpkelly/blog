@@ -23,6 +23,7 @@ export const Navigation = () => {
         <NavLink id={'sketches-link'} to={'/sketches'}>
           Sketches
         </NavLink>
+        <NavLink to={'/articles'}>Articles</NavLink>
         <NavLink to={'/resume'}>Resume</NavLink>
       </Right>
     </Nav>

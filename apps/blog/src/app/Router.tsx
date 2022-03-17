@@ -8,6 +8,8 @@ import { EmailApp } from '../features/sketches/sketches/email-client/EmailApp';
 import { ResumePage } from '../features/resume/ResumePage';
 import { FoodApp } from '../features/sketches/sketches/foodapp-signup/FoodApp';
 import { FooterSection } from '../features/footer/FooterSection';
+import { ArticlesPage } from '../features/articles/ArticlesPage';
+import { ArticlePage } from '../features/articles/ArticlePage';
 
 export const Router = () => {
   return (
@@ -19,6 +21,8 @@ export const Router = () => {
         <Route path={'/sketches'} element={<SketchesPage />} />
         <Route path={'/sketches/email'} element={<EmailApp />} />
         <Route path={'/sketches/foodapp-signup'} element={<FoodApp />} />
+        <Route path={'/articles'} element={<ArticlesPage />} />
+        <Route path={'/articles/:name'} element={<ArticlePage />} />
         <Route path={'/resume'} element={<ResumePage />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>

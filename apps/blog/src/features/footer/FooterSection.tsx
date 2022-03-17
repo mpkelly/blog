@@ -9,6 +9,7 @@ import {
   DribbbleIcon,
   MailIcon,
 } from '@mpkelly/ui';
+import { NavLink } from '../../app/Navigation';
 
 const Root = styled('section', Column, {
   bg: '$bg-1',
@@ -40,7 +41,7 @@ const ContactName = styled(Text);
 
 const Articles = styled(Column, { gap: '$lg' });
 
-const Article = styled('a', Text, { color: '$text-2' });
+const Article = styled(NavLink, Text, { color: '$text-2' });
 
 export const FooterSection = () => {
   return (
@@ -63,7 +64,9 @@ export const FooterSection = () => {
         </ContactLinks>
         <Articles>
           <Title>Latest articles</Title>
-          <Article>How to manage colour in software products </Article>
+          <Article to={'/articles/colour'}>
+            How to manage colour in software products{' '}
+          </Article>
         </Articles>
       </Content>
     </Root>
