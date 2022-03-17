@@ -206,4 +206,4 @@ You don't need to redefine all of these in each palette as most palettes won't n
 
 Some websites go crazy with colour (see Amazon's product page, for example) so you would need more variables than what's above, but the multi-palette approach can still be used.
 
-Final word: I've used info and danger contexts above, but you can create palettes for anything, including form inputs, selected nav items and active links. 
+Final word: I've used the well-known info and danger contexts above, but you can create palettes for anything, including form inputs, selected nav items and active links. 
