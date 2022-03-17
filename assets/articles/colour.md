@@ -4,7 +4,7 @@ I always had a hard time naming colour variables in my themes on the apps I've m
 
 ### What the Material Design spec says
 
-If you read the [colour guidelines section of the Material Design spec](https://material.io/design/color/the-color-system.html#color-theme-creation) then you will see they talk about "on colours". Imagine you're working for an eco-friendly company whose primary colour is a clichéd green. They use this green on the navigation section but the main content is on a light background. On the navigation, the main text colour is whitish but on the content it is dark. Following the Material Design guidelines we would call the main text colour on the content `primary-text-color` and then call the main text colour on the navigation `primary-text-on-primary-color` which is the primary text when used on top of the theme's primary colour. This gives us a consistent way to name our colours, but it still suffers from problems. Let's take a look.
+If you read the [colour guidelines section of the Material Design spec](https://material.io/design/color/the-color-system.html#color-theme-creation) then you will see they talk about "on colours". Imagine you're working for an eco-friendly company whose primary colour is a clichéd green. They use this green on the navigation section but the main content is on a light background. On the navigation, the main text colour is whitish but on the content it is dark. Following the Material Design guidelines we would call the main text colour on the content `primary-text-color` and then call the main text colour on the navigation `primary-text-on-primary-color` which is the primary text when used on top of the theme's primary colour. This gives us a consistent way to name our colours, but it still suffers from problems.
 
 The problem with creating with "on colours" like `primary-text-on-primary-color`, `primary-text-on-danger-color` etc is mostly related to maintenance. As a general rule, the more names you have the harder maintenance will be because you will need to apply these names across various parts of your site to override default styles.
 
@@ -162,17 +162,17 @@ When the product owner says "This should be more of a warning than an info". You
 
 ### In Summary
 
-To recap, the general pattern for this approach is as follows. 
+To recap, the general features of this pattern are:
 
 1. See your theme as containing a collection of colour palettes instead of a single colour palette, and extract those palettes into reusable chunks. Here I am using CSS variables, but you can do this with the many CSS-in-JS libraries too.
-2. If the background colour changes you probably need a new palette.
-3. Try to only reference variables in your components and never specific colours like blue, orange etc.
+2. When the `background-color` changes you generally need a new palette.
+3. Only reference variables in your components and never specific colours like blue, orange etc.
 
 The benefits of this approach are:
 
 1. The cost of maintenance is lower.
 2. Code reuse is much easier - just drop your components anywhere and they reflect the active palette.
-3. It's conceptually simpler: you don't need complex colour names when the context changes (see notes)
+3. It's conceptually simpler - you don't need complex colour names when the context changes (see notes)
 4. Creating a dark theme is easier because there are fewer colours in fewer places that need to be redefined. 
 
 ### Notes
