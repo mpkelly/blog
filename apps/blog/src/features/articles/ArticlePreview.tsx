@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { H2, Row, Column, Text, styled } from '@mpkelly/ui';
+import { Column, H2, styled } from '@mpkelly/ui';
 import { Markdown } from './Markdown';
 
 type Props = {
