@@ -1,5 +1,5 @@
 import { Column, globalStyles, styled } from '@mpkelly/ui';
-import { Router } from './Router';
+import { Router } from '../features/navigation/Router';
 
 const Root = styled(Column, {
   alignItems: 'center',

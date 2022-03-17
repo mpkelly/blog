@@ -6,7 +6,7 @@ const Root = styled(Column, { gap: '$xl' });
 
 const PrintSpacer = styled('div', {
   display: 'none',
-  height: 70,
+  height: 20,
 });
 
 export const EmploymentHistory = () => {

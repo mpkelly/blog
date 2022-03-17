@@ -1,15 +1,15 @@
 import React from 'react';
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { HomePage } from '../features/home/HomePage';
-import { AboutPage } from '../features/about/AboutPage';
+import { HomePage } from '../home/HomePage';
+import { AboutPage } from '../about/AboutPage';
 import { Navigation } from './Navigation';
-import { SketchesPage } from '../features/sketches/SketchesPage';
-import { EmailApp } from '../features/sketches/sketches/email-client/EmailApp';
-import { ResumePage } from '../features/resume/ResumePage';
-import { FoodApp } from '../features/sketches/sketches/foodapp-signup/FoodApp';
-import { FooterSection } from '../features/footer/FooterSection';
-import { ArticlesPage } from '../features/articles/ArticlesPage';
-import { ArticlePage } from '../features/articles/ArticlePage';
+import { SketchesPage } from '../sketches/SketchesPage';
+import { EmailApp } from '../sketches/sketches/email-client/EmailApp';
+import { ResumePage } from '../resume/ResumePage';
+import { FoodApp } from '../sketches/sketches/foodapp-signup/FoodApp';
+import { FooterSection } from '../footer/FooterSection';
+import { ArticlesPage } from '../articles/ArticlesPage';
+import { ArticlePage } from '../articles/ArticlePage';
 
 export const Router = () => {
   return (

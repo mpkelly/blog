@@ -1,7 +1,6 @@
 import React from 'react';
-import { styled } from '@mpkelly/ui';
+import { darkTheme, Row, styled, Text } from '@mpkelly/ui';
 import { Macbook } from './Macbook';
-import { Payment } from './payment/Payment';
 
 const multiplier = 500 / 1008;
 
@@ -15,22 +14,25 @@ const Container = styled('div', {
   },
 });
 
-const Root = styled('div', {
+const Root = styled(Row, {
   width: 761 * multiplier,
   height: 478 * multiplier,
   left: 124 * multiplier,
   top: 33 * multiplier,
   flexShrink: 0,
   position: 'absolute',
-  bg: '$primary-5',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: '$text-2',
+  bg: '$bg-1',
 });
 
 export const Mockup = () => {
   return (
     <Container>
       <Macbook />
-      <Root>
-        <Payment />
+      <Root className={darkTheme}>
+        <Text>WIP</Text>
       </Root>
     </Container>
   );

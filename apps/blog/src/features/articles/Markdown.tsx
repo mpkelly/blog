@@ -9,9 +9,20 @@ type Props = {
 
 export const Root = styled(ReactMarkdown, {
   lineHeight: '$paragraph',
+  code: {
+    fontSize: 'smaller',
+    mx: '$sm',
+  },
   pre: {
     whiteSpace: 'pre-wrap',
+    overflow: 'hidden',
     fontSize: '$sm',
+    div: {
+      border: 'none !important',
+      boxShadow: 'none !important',
+      whiteSpace: 'pre',
+      overflow: 'hidden',
+    },
   },
 });
 

@@ -9,7 +9,7 @@ import {
   DribbbleIcon,
   MailIcon,
 } from '@mpkelly/ui';
-import { NavLink } from '../../app/Navigation';
+import { NavLink } from '../navigation/Navigation';
 
 const Root = styled('section', Column, {
   bg: '$bg-1',
@@ -65,7 +65,7 @@ export const FooterSection = () => {
         <Articles>
           <Title>Latest articles</Title>
           <Article to={'/articles/colour'}>
-            How to manage colour in software products{' '}
+            How to organise colour in websites and apps
           </Article>
         </Articles>
       </Content>
