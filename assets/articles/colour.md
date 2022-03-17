@@ -1,12 +1,12 @@
 ## How to organise colour in your websites and apps
 
-I always had a hard time naming colour variables in my themes on the apps I've made in the past. It starts off simple enough with variable names like `primary-text-color`, `muted-text-color` etc but quickly gets tricky once you have different background colours for, say, an alert box component or on your navigation panel. If your content is on a light background but your navigation is using a dark background, then what do you call the text colour used on the navigation panel? If you poke around github you will find people use names like `light-text-color` and `dark-text-color` etc and then choose one based on the background colour, but two colours is often not enough to achieve good contrast against all of your background colours. 
+I've always had a hard time naming colour variables in my themes on the apps I've made in the past. It starts off simple enough with variable names like `primary-text-color`, `muted-text-color` etc. but quickly gets tricky once you have different background colours for, say, an alert box component or on your navigation panel. If your content is on a light background but your navigation is using a dark background, then what do you call the text colour used on the navigation panel? If you poke around github you will find people use names like `light-text-color` and `dark-text-color` etc. and then choose one based on the background colour, but two colours is often not enough to achieve good contrast against all of your background colours. 
 
 ### What the Material Design spec says
 
 If you read the [colour guidelines section of the Material Design spec](https://material.io/design/color/the-color-system.html#color-theme-creation) then you will see they talk about "on colours". Imagine you're working for an eco-friendly company whose primary colour is green - quelle surprise! They use this green for the navigation section background, but the main content is on a light background. On the navigation, the main text colour is whitish but on the content it is dark. Following the Material Design guidelines we would call the main text colour on the content `primary-text-color` and then call the main text colour on the navigation `primary-text-on-primary-color` which is the primary text when used on top of the theme's primary colour. This gives us a consistent way to name our colours, but it still suffers from problems.
 
-The problem with creating with "on colours" like `primary-text-on-primary-color`, `primary-text-on-danger-color` etc is mostly related to maintenance. As a general rule, the more names you have the harder maintenance will be because you will need to apply these names across various parts of your site to override default styles.
+The problem with creating with "on colours" like `primary-text-on-primary-color`, `primary-text-on-danger-color` etc. is mostly related to maintenance. As a general rule, the more names you have the harder maintenance will be because you will need to apply these names across various parts of your site to override default styles.
 
 Typically, an app will contain components like this:
 
@@ -53,9 +53,21 @@ You would then use these colours in your site like so:
 
 ```
 
-### A theme should have more than one palette
+### A theme should have more than one palette or colour context
 
-Your app's themes normally only contain a single *flat* colour palette but for non-trivial apps you actually have *several* palettes or "colour contexts". In my opinion, it's better to see each context as a palette in its own right and stick to the smallest number of colour names as possible. This is conceptually simpler, scales much better and allows you to reuse components more easily.
+The problems with naming stem from the fact that we see the theme's colour palette as being flat when it is better to see it as a tree that supports multiple "color contexts" or palettes. Each context can redefine the value of variables like `primary-text-color`:
+
+```
+theme
+├─ primary-text-color: ...
+...
+├─ info color context 
+│  ├─ primary-text-color: ...
+│  ...
+├─ dark color context
+│  ├─ primary-text-color: ...
+...
+```
 
 Here's how it might look using CSS variables:
 
@@ -142,7 +154,7 @@ Need a danger alert? You already have one:
 </div>
 ```
 
-What we've done here is lifted specific (concrete) colours out of our components and made each palette a reusable piece of style logic. This allows us to plug-in the colours at whatever level we like in our codebase. Imagine your web app is made up of sections and the designer wants to really emphasise a certain section. They decide to make it use the info colour palette. All you need to do is this:
+What we've done here is lifted specific (concrete) colours out of our components and made each palette a reusable piece of style logic. This allows us to plug in the colours at whatever level we like in our codebase. Imagine your web app is made up of sections and the designer wants to really emphasise a certain section. They decide to make it use the info colour palette. All you need to do is this:
 
 ```html
 <section class='info-palette'>
@@ -194,7 +206,7 @@ I've kept the colours to a minimum above for the sake of brevity. In a non-trivi
   /** brand colour that's often used on backgrounds e.g. the nav background **/
   --primary-color: ...,
 
-  /** optional but common: can be used for action buttons and active, input borders etc **/
+  /** optional but common: can be used for action buttons and active, input borders etc. **/
   --accent-color: ...,
  
   /** used for dividers and input borders **/
@@ -203,7 +215,5 @@ I've kept the colours to a minimum above for the sake of brevity. In a non-trivi
 
 ```
 You don't need to redefine all of these in each palette as most palettes won't need all of them. Typically, the `primary-text-color` and `background-color` would be required but the others depend on context.
-
-Some websites go crazy with colour (see Amazon's product page, for example) so you would need more variables than what's above, but the multi-palette approach can still be used.
 
 Final word: I've used the well-known info and danger contexts above, but you can create palettes for anything, including form inputs, selected nav items and active links. 
