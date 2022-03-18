@@ -4,12 +4,13 @@ I've always had a hard time naming colour variables in my themes on the apps I'v
 
 ### What the Material Design spec says
 
-If you read the [colour guidelines section of the Material Design spec](https://material.io/design/color/the-color-system.html#color-theme-creation) then you will see they talk about "on colours". Imagine you're working for an eco-friendly company whose primary colour is green - quelle surprise! They use this green for the navigation section background, but the main content is on a light background. On the navigation, the main text colour is whitish but on the content it is dark. Following the Material Design guidelines we would call the main text colour on the content `primary-text-color` and then call the main text colour on the navigation `primary-text-on-primary-color` which is the primary text when used on top of the theme's primary colour. This gives us a consistent way to name our colours, but it still suffers from problems.
+If you read the [colour guidelines section of the Material Design spec](https://material.io/design/color/the-color-system.html#color-theme-creation) then you will see they talk about "on colours". Imagine you're working for an eco-friendly company whose primary colour is green. The main content is on a light background but they use this green for the navigation section background. The text colour on the main content is dark but the text colour on the navigation is light. Following the Material Design guidelines we would call the main text colour on the content `primary-text-color` and then call the main text colour on the navigation `primary-text-on-primary-color` which is the primary text when used on top of the theme's primary colour. This gives us a consistent way to name our colours, but it still suffers from problems.
 
 The problem with creating with "on colours" like `primary-text-on-primary-color`, `primary-text-on-danger-color` etc. is mostly related to maintenance. As a general rule, the more names you have the harder maintenance will be because you will need to apply these names across various parts of your site to override default styles.
 
-Typically, an app will contain components like this:
+### A common way to support colour variants
 
+This is probably the most common approach to supporting colour variants on your components. 
 ```css
 
 .alert-box {
@@ -53,9 +54,11 @@ You would then use these colours in your site like so:
 
 ```
 
+Now let's take a look at an alternative.   
+
 ### A theme should have more than one palette or colour context
 
-The problems with naming stem from the fact that we see the theme's colour palette as being flat when it is better to see it as a tree that supports multiple "color contexts" or palettes. Each context can redefine the value of variables like `primary-text-color`:
+The problems with naming, which then affects how we apply colour, stem from the fact that we see our the theme's colour palette as being flat when it is better to see it as a tree that supports multiple "color contexts" or palettes. In a tree, each context can redefine the value of variables like `primary-text-color`:
 
 ```
 theme
@@ -69,7 +72,7 @@ theme
 ...
 ```
 
-Here's how it might look using CSS variables:
+It's a tree because each context will still inherit styles from the primary context while having the option to redefine the variables as necessary. Here's how it might look using CSS variables.  
 
 ```css
 
@@ -102,7 +105,7 @@ body {
   --background-color: red;
 }
 
-/** key benefit: we don't need any component-level colour variants below **/
+/** key benefit: we don't need any component-level colour variants - e.g. info buttons - below **/
 
 .button {
   color: var(--primary-text-color);
@@ -154,7 +157,9 @@ Need a danger alert? You already have one:
 </div>
 ```
 
-What we've done here is lifted specific (concrete) colours out of our components and made each palette a reusable piece of style logic. This allows us to plug in the colours at whatever level we like in our codebase. Imagine your web app is made up of sections and the designer wants to really emphasise a certain section. They decide to make it use the info colour palette. All you need to do is this:
+What we've done here is lifted specific colours up out of our components and made each palette a reusable piece of style logic. This allows us to plug in the colours at whatever level we like in our codebase. 
+
+Imagine your web app is made up of sections and the designer wants to really emphasise a certain section. They decide to make it use the info colour palette. All you need to do is this:
 
 ```html
 <section class='info-palette'>
@@ -176,7 +181,7 @@ When the product owner says "This should be more of a warning than an info". You
 
 To recap, the general features of this pattern are:
 
-1. See your theme as containing a collection of colour palettes instead of a single colour palette, and extract those palettes into reusable chunks. Here I am using CSS variables, but you can do this with the many CSS-in-JS libraries too.
+1. See your theme as containing a hierarchy of colour palettes instead of a single colour palette, and extract those palettes into reusable chunks. 
 2. When the `background-color` changes you generally need a new palette.
 3. Only reference variables in your components and never specific colours like blue, orange etc.
 
@@ -184,7 +189,7 @@ The benefits of this approach are:
 
 1. The cost of maintenance is lower.
 2. Code reuse is much easier - just drop your components anywhere and they reflect the active palette.
-3. It's conceptually simpler - you don't need complex colour names when the context changes (see notes)
+3. It's conceptually simpler - you can use the same set of colour names everywhere. 
 4. Creating a dark theme is easier because there are fewer colours in fewer places that need to be redefined. 
 
 ### Notes
