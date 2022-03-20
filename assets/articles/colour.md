@@ -182,14 +182,14 @@ When the product owner says "This should be more of a warning than an info". You
 To recap, the general features of this pattern are:
 
 1. See your theme as containing a hierarchy of colour palettes instead of a single colour palette, and extract those palettes into reusable chunks. 
-2. When the `background-color` changes you generally need a new palette.
+2. You generally add one palette each time you need a different `background-color`.   
 3. Only reference variables in your components and never specific colours like blue, orange etc.
 
 The benefits of this approach are:
 
 1. The cost of maintenance is lower.
 2. Code reuse is much easier - just drop your components anywhere and they reflect the active palette.
-3. It's conceptually simpler - you can use the same set of colour names everywhere. 
+3. It's conceptually simpler - you can use the same standard set of colour names everywhere. 
 4. Creating a dark theme is easier because there are fewer colours in fewer places that need to be redefined. 
 
 ### Notes
