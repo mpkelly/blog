@@ -6,7 +6,7 @@ import { Markdown } from './Markdown';
 type Props = {};
 
 const Root = styled('article', Column, {
-  width: '$content',
+  width: '$article',
   p: '$xl',
   gap: '$2xl',
   minHeight: '100vh',
